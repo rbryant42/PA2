@@ -78,22 +78,23 @@ def main(args):
 				split_hash = hashtag.split('#')
 				# gets rid of initial empty string for '#'
 				split_hash = split_hash[1:]
-				if split_hash > 5:
-					# (8)
-					print('hashtag illegal format, connection refused.')
 				for s in split_hash:
-					if len(s) > 14:
+					if len(s) > 14 or s == 'ALL':
 						# (8)
 						print('hashtag illegal format, connection refused.')
-				if '##' in hashtag:
+				if len(split_hash) > 5:
+					# (8)
+					print('hashtag illegal format, connection refused.')
+				elif '##' in hashtag:
 					# (8)
 					print('hashtag illegal format, connection refused.')
 				elif re.search(r'[^a-zA-Z0-9#]', hashtag):
 					# (8)
 					print('hashtag illegal format, connection refused.')
-				tweetbody = [tweet, hashtag]
-				tweetbody = json.dumps(tweetbody)
-				clientSocket.send(tweetbody.encode('utf-8'))
+				else:
+					tweetbody = [tweet, split_hash]
+					tweetbody = json.dumps(tweetbody)
+					clientSocket.send(tweetbody.encode('utf-8'))
 		elif cmd == 'subscribe':
 			if len(data) == 2:
 				hashtag = data[1]
@@ -108,7 +109,8 @@ def main(args):
 		elif cmd == 'getusers':
 			if len(data) == 1:
 				clientSocket.send(cmd.encode())
-				users = clientSocket.recv(1024)
+				users = clientSocket.recv(1024).decode()
+				users = json.loads(users)
 				for u in users:
 					print(u)
 		elif cmd == 'gettweets':
