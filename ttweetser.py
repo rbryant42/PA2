@@ -3,14 +3,10 @@ import sys
 import protocol
 import json
 import threading
-import asyncio
-import select
-import _thread
 
-import concurrent.futures
-# this is a new repo
 
 users = set()
+all_tweets = dict()
 
 def main(args):
 	# Server Port from command
@@ -27,7 +23,6 @@ def main(args):
 	print('The server is ready to connect...')
 	inputs =[serverSocket]
 	outputs = []
-	# with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor: executor.map(newClient(serverSocket), range(5))
 	# accept connection to client
 	while True:
 		connectionSocket, addr = serverSocket.accept()
@@ -44,11 +39,6 @@ def main(args):
 			users.add(usr)
 			print('user added: ', usr)
 			threading.Thread(target = newClient, args = (connectionSocket, addr, usr)).start()
-			# print('start')
-			# t1.start()
-			# print('started')
-			# print('join')
-			# t1.join()
 
 def newClient(connectionSocket, addr, usr):
 	# Receive message from client
@@ -64,8 +54,12 @@ def newClient(connectionSocket, addr, usr):
 			print('removed: ', usr)
 			print("Diconnected from: ", addr[0])
 		elif cmd == "tweet":
-			tweet = connectionSocket.recv(1024).decode()
-			print(tweet)
+			tweetbody = connectionSocket.recv(1024).decode('utf-8')
+			tweetbody = json.loads(tweetbody)
+			tweet = tweetbody[0]
+			hashtag = tweetbody[1]
+		elif cmd == "getusers":
+			connectionSocket.send(users)
 
 
 if __name__ == '__main__':

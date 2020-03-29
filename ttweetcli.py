@@ -52,23 +52,48 @@ def main(args):
 		prompt = input()
 		# split prompt by quotes, gets each parameter
 		data = prompt.split()
-		print(data) 
 		# check that a prompt was entered
-		# if data is None:
-			# (5)
-			# print('wrong number of parameters, connection refused.')
+		if data is None:
+			(5)
+			print('wrong number of parameters, connection refused.')
 		# command is first argument
 		cmd = data[0]
 		if cmd == 'tweet':
+			# split to get actual tweet
 			data = prompt.split('"')
+			# check that we have 3 arguments
 			if len(data) == 3:
+				# sent cmd
 				clientSocket.send(cmd.encode())
+				# handle message
 				tweet = data[1]
+				if tweet == None:
+					# (7)
+					print("message format illegal")
 				if len(tweet) > 150:
+					# (6)
 					print("message length illegal, connection refused.")
-				clientSocket.send(tweet.encode())
-				hashtag = data[2]
-			print(cmd)
+				# handle hashtag
+				hashtag = data[2].strip()
+				split_hash = hashtag.split('#')
+				# gets rid of initial empty string for '#'
+				split_hash = split_hash[1:]
+				if split_hash > 5:
+					# (8)
+					print('hashtag illegal format, connection refused.')
+				for s in split_hash:
+					if len(s) > 14:
+						# (8)
+						print('hashtag illegal format, connection refused.')
+				if '##' in hashtag:
+					# (8)
+					print('hashtag illegal format, connection refused.')
+				elif re.search(r'[^a-zA-Z0-9#]', hashtag):
+					# (8)
+					print('hashtag illegal format, connection refused.')
+				tweetbody = [tweet, hashtag]
+				tweetbody = json.dumps(tweetbody)
+				clientSocket.send(tweetbody.encode('utf-8'))
 		elif cmd == 'subscribe':
 			if len(data) == 2:
 				hashtag = data[1]
@@ -82,7 +107,10 @@ def main(args):
 				print(cmd)
 		elif cmd == 'getusers':
 			if len(data) == 1:
-				print(cmd)
+				clientSocket.send(cmd.encode())
+				users = clientSocket.recv(1024)
+				for u in users:
+					print(u)
 		elif cmd == 'gettweets':
 			if len(data) == 2:
 				usr = data[1]
