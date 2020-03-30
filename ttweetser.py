@@ -1,12 +1,15 @@
 from socket import *
+from protocol import *
 import sys
-import protocol
 import json
 import threading
 
-
+#DICTIONARY DEFINITIONS: {KEYS: VALUES}
+# {username: list of this user's tweets}
 users_and_tweets = dict()
-users_and_hashtags = dict()
+# {hashtag: list of users subscribed to this hashtag}
+hashtags_and_users = dict()
+# {hashtag: list of tweets with this hashtag}
 hashtags_and_tweets = dict()
 
 def main(args):
@@ -33,16 +36,16 @@ def main(args):
 		elif usr not in users_and_tweets:
 			connectionSocket.send("valid".encode())
 			users_and_tweets[usr] = list()
-			users_and_hashtags[usr] = list()
 			print('user added: ', usr)
 			threading.Thread(target = newClient, args = (connectionSocket, addr, usr)).start()
 
 def newClient(connectionSocket, addr, usr):
 	# Receive message from client
+	subscriptionCount = 0
 	connected = True
 	while connected:
 		print(users_and_tweets)
-		print(users_and_hashtags)
+		print(hashtags_and_users)
 		print(hashtags_and_tweets)
 		print("IN THREAD")
 		cmd = connectionSocket.recv(1024).decode()
@@ -67,6 +70,23 @@ def newClient(connectionSocket, addr, usr):
 					hashtags_and_tweets[h] = [tweet]
 				else:
 					hashtags_and_tweets[h].append(tweet)
+				if h not in hashtags_and_users:
+					hashtags_and_users[h] = list()
+		elif cmd == "subscribe":
+			subscription = connectionSocket.recv(1024).decode('utf-8')
+			# users can subscribe to hashtag that hasn't been used in a tweet
+			# so create lists in corresponding dicts
+			if subscription not in hashtags_and_users:
+				hashtags_and_users[subscription] = list()
+				hashtags_and_tweets[subscription] = list()
+			# user already subscribed to hashtag or has max subs
+			if usr in hashtags_and_users[subscription] or subscriptionCount == 3:
+				connectionSocket.send(SUBSCRIBE_ERROR.encode())
+			# user subscription request is valid
+			else:
+				hashtags_and_users[subscription].append(usr)
+				subscriptionCount += 1
+				connectionSocket.send(SUBSCRIBE_SUCCESS.encode())
 		elif cmd == "getusers":
 			users = list(users_and_tweets.keys())
 			users = json.dumps(users)

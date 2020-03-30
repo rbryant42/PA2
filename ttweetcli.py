@@ -1,6 +1,6 @@
 from socket import *
 import sys
-import protocol
+from protocol import *
 import json
 import re
 
@@ -64,7 +64,10 @@ def main(args):
 			# check that we have 3 arguments
 			if len(data) == 3:
 				# sent cmd
-				clientSocket.send(cmd.encode())
+				# clientSocket.send(cmd.encode())
+				### Logic comment: Not sure if we should send the command
+				### before we check for input errors. Then, the server
+				### may be waiting to receive something that it won't
 				# handle message
 				tweet = data[1]
 				if tweet == None:
@@ -92,12 +95,35 @@ def main(args):
 					# (8)
 					print('hashtag illegal format, connection refused.')
 				else:
+					# sent cmd
+					clientSocket.send(cmd.encode())
 					tweetbody = [tweet, split_hash]
 					tweetbody = json.dumps(tweetbody)
 					clientSocket.send(tweetbody.encode('utf-8'))
 		elif cmd == 'subscribe':
 			if len(data) == 2:
-				hashtag = data[1]
+				hashtag = data[1].strip()
+				split_hash = hashtag.split('#')
+				# handle hashtag errors in client input format
+				# server will handle if hashtag is already subscribed to
+				# or user at max subs
+				print(hashtag)
+				if len(hashtag) > 15:
+					print('hashtag illegal format, connection refused.')
+				elif len(split_hash) > 2:
+					print('hashtag illegal format, connection refused.')
+				# re givin me problems for some reason
+				# elif re.search(r'[^a-zA-Z0-9#', hashtag):
+				# 	print("in3")
+				# 	print('hashtag illegal format, connection refused.')
+				else:
+					clientSocket.send(cmd.encode())
+					clientSocket.send(hashtag[1:].encode())
+					status = clientSocket.recv(1024).decode()
+					if status == SUBSCRIBE_ERROR:
+						print("operation failed: sub", hashtag, "failed, already exists or exceeds 3 limitation")
+					elif status == SUBSCRIBE_SUCCESS:
+						print("operation success")
 			print(cmd)
 		elif cmd == 'unsubscribe':
 			if len(data) == 2:
