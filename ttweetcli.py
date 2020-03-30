@@ -107,7 +107,6 @@ def main(args):
 				# handle hashtag errors in client input format
 				# server will handle if hashtag is already subscribed to
 				# or user at max subs
-				print(hashtag)
 				if len(hashtag) > 15:
 					print('hashtag illegal format, connection refused.')
 				elif len(split_hash) > 2:
@@ -120,14 +119,32 @@ def main(args):
 					clientSocket.send(cmd.encode())
 					clientSocket.send(hashtag[1:].encode())
 					status = clientSocket.recv(1024).decode()
-					if status == SUBSCRIBE_ERROR:
+					if status == SUB_OR_UNSUB_ERROR:
 						print("operation failed: sub", hashtag, "failed, already exists or exceeds 3 limitation")
-					elif status == SUBSCRIBE_SUCCESS:
+					elif status == SUB_OR_UNSUB_SUCCESS:
 						print("operation success")
 			print(cmd)
 		elif cmd == 'unsubscribe':
 			if len(data) == 2:
-				hashtag = data[1]
+				hashtag = data[1].strip()
+				split_hash = hashtag.split('#')
+				# handle hashtag errors in client input format
+				# server will handle if hashtag is already subscribed to
+				# or user at max subs
+				if len(hashtag) > 15:
+					print('hashtag illegal format, connection refused.')
+				elif len(split_hash) > 2:
+					print('hashtag illegal format, connection refused.')
+				# re givin me problems for some reason
+				# elif re.search(r'[^a-zA-Z0-9#', hashtag):
+				# 	print("in3")
+				# 	print('hashtag illegal format, connection refused.')
+				else:
+					clientSocket.send(cmd.encode())
+					clientSocket.send(hashtag[1:].encode())
+					status = clientSocket.recv(1024).decode()
+					if status == SUB_OR_UNSUB_SUCCESS:
+						print("operation success")
 			print(cmd)
 		elif cmd == 'timeline':
 			if len(data) == 1:

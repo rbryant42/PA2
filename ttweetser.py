@@ -81,12 +81,26 @@ def newClient(connectionSocket, addr, usr):
 				hashtags_and_tweets[subscription] = list()
 			# user already subscribed to hashtag or has max subs
 			if usr in hashtags_and_users[subscription] or subscriptionCount == 3:
-				connectionSocket.send(SUBSCRIBE_ERROR.encode())
+				connectionSocket.send(SUB_OR_UNSUB_ERROR.encode())
 			# user subscription request is valid
 			else:
 				hashtags_and_users[subscription].append(usr)
 				subscriptionCount += 1
-				connectionSocket.send(SUBSCRIBE_SUCCESS.encode())
+				connectionSocket.send(SUB_OR_UNSUB_SUCCESS.encode())
+		elif cmd == "unsubscribe":
+			unsub = connectionSocket.recv(1024).decode('utf-8')
+			# #ALL unsubs the user from #ALL and any other subscriptions
+			if unsub == "ALL":
+				for h in hashtags_and_users:
+					if usr in hashtags_and_users[h]:
+						hashtags_and_users[h].remove(usr)
+				subscriptionCount = 0
+			# only need to remove the user and decrement the subCount if they're
+			# actually subscribed to what they want to unsubscribe from
+			elif unsub in hashtags_and_users.keys() and usr in hashtags_and_users[unsub]:
+				hashtags_and_users[unsub].remove(usr)
+				subscriptionCount -= 1
+			connectionSocket.send(SUB_OR_UNSUB_SUCCESS.encode())
 		elif cmd == "getusers":
 			users = list(users_and_tweets.keys())
 			users = json.dumps(users)
