@@ -3,9 +3,13 @@ import sys
 from protocol import *
 import json
 import re
+import threading
+
+socketLock = threading.Lock()
+socketAvailable = threading.Condition()
+timeline = []
 
 def main(args):
-
 	# checks number of args
 	if len(args) is not 4:
 		# (5)
@@ -35,6 +39,7 @@ def main(args):
 		print("server port invalid, connection refused.")
 		sys.exit()
 
+	clientSocket.settimeout(0.1)
 	# check if username is taken
 	clientSocket.send(username.encode())
 	val = clientSocket.recv(1024).decode()
@@ -46,10 +51,20 @@ def main(args):
 		# (1)
 		print('username legal, connection established.')
 
+	threading.Thread(target = clientCommand, args = [clientSocket]).start()
+
+def clientCommand(clientSocket):
 	# connection established with username
+	socketLock.acquire()
+	socketAvailable.acquire()
+	threading.Thread(target = clientListen, args = [clientSocket]).start()
 	while True:
+		socketLock.release()
+		socketAvailable.release()
 		# get user command
 		prompt = input()
+		socketLock.acquire()
+		socketAvailable.acquire()
 		# split prompt by quotes, gets each parameter
 		data = prompt.split()
 		# check that a prompt was entered
@@ -76,6 +91,9 @@ def main(args):
 				if len(tweet) > 150:
 					# (6)
 					print("message length illegal, connection refused.")
+				# put quotes back on tweet because its easier for displaying
+				# the tweets in the desired format later
+				tweet = "\"" + data[1] + "\""
 				# handle hashtag
 				hashtag = data[2].strip()
 				split_hash = hashtag.split('#')
@@ -96,6 +114,7 @@ def main(args):
 					print('hashtag illegal format, connection refused.')
 				else:
 					# sent cmd
+					tweet = tweet + " " + hashtag
 					clientSocket.send(cmd.encode())
 					tweetbody = [tweet, split_hash]
 					tweetbody = json.dumps(tweetbody)
@@ -123,7 +142,6 @@ def main(args):
 						print("operation failed: sub", hashtag, "failed, already exists or exceeds 3 limitation")
 					elif status == SUB_OR_UNSUB_SUCCESS:
 						print("operation success")
-			print(cmd)
 		elif cmd == 'unsubscribe':
 			if len(data) == 2:
 				hashtag = data[1].strip()
@@ -145,10 +163,10 @@ def main(args):
 					status = clientSocket.recv(1024).decode()
 					if status == SUB_OR_UNSUB_SUCCESS:
 						print("operation success")
-			print(cmd)
 		elif cmd == 'timeline':
 			if len(data) == 1:
-				print(cmd)
+				for tweet in timeline:
+					print(tweet)
 		elif cmd == 'getusers':
 			if len(data) == 1:
 				clientSocket.send(cmd.encode())
@@ -168,6 +186,18 @@ def main(args):
 			break
 		else:
 			print('command invalid, try again.')
+
+def clientListen(clientSocket):
+	while True:
+		try:
+			socketLock.acquire()
+			msg = clientSocket.recv(1024).decode()
+			timeline.append(msg)
+			print(msg)
+			socketLock.release()
+		except Exception as e:
+			socketLock.release()
+
 
 
 if __name__ == '__main__':

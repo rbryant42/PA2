@@ -11,6 +11,9 @@ users_and_tweets = dict()
 hashtags_and_users = dict()
 # {hashtag: list of tweets with this hashtag}
 hashtags_and_tweets = dict()
+# queue containing messages to be sent to a user
+# {user: list of tweets to be sent}
+subscriptionQueue = {}
 
 def main(args):
 	# Server Port from command
@@ -26,7 +29,6 @@ def main(args):
 	# accept connection to client
 	while True:
 		connectionSocket, addr = serverSocket.accept()
-		print("IN MAIN")
 		# connectionSocket.setblocking(False)
 		print("Connected to: ", addr[0])
 		# Receive message from client
@@ -36,7 +38,7 @@ def main(args):
 		elif usr not in users_and_tweets:
 			connectionSocket.send("valid".encode())
 			users_and_tweets[usr] = list()
-			print('user added: ', usr)
+			subscriptionQueue[usr] = list()
 			threading.Thread(target = newClient, args = (connectionSocket, addr, usr)).start()
 
 def newClient(connectionSocket, addr, usr):
@@ -44,10 +46,12 @@ def newClient(connectionSocket, addr, usr):
 	subscriptionCount = 0
 	connected = True
 	while connected:
-		print(users_and_tweets)
-		print(hashtags_and_users)
-		print(hashtags_and_tweets)
-		print("IN THREAD")
+		print("IN THREAD" + usr)
+		# empty queue of tweets that user is subscribed to
+		if subscriptionQueue[usr]:
+			connectionSocket.send(subscriptionQueue[usr][0].encode())
+			subscriptionQueue[usr] = list()
+		# receive client command
 		cmd = connectionSocket.recv(1024).decode()
 		print(cmd)
 		if cmd == "exit":
@@ -58,21 +62,32 @@ def newClient(connectionSocket, addr, usr):
 			print('removed: ', usr)
 			print("Diconnected from: ", addr[0])
 		elif cmd == "tweet":
+			# receive tweet info
 			tweetbody = connectionSocket.recv(1024).decode('utf-8')
 			tweetbody = json.loads(tweetbody)
+			# whole tweet of form: "message" #hashtag_string
 			tweet = tweetbody[0]
-			print(tweet)
 			hashtags = tweetbody[1]
-			print(hashtags)
+			# store users tweet
 			users_and_tweets[usr].append(tweet)
+
 			for h in hashtags:
+				# if hashtag hasnt been used yet, add new entry
 				if h not in hashtags_and_tweets:
 					hashtags_and_tweets[h] = [tweet]
 				else:
 					hashtags_and_tweets[h].append(tweet)
+				# add new entry in hashtags and users so users can subscribe to it
 				if h not in hashtags_and_users:
 					hashtags_and_users[h] = list()
+				# for each user subscribed to this hashtag, append this tweet to
+				# the queue of tweets to be sent to subscribers
+				for u in hashtags_and_users[h]:
+					msg = usr + ": " + tweet
+					if msg not in subscriptionQueue[u]:
+						subscriptionQueue[u].append(msg)
 		elif cmd == "subscribe":
+			# receive subscription
 			subscription = connectionSocket.recv(1024).decode('utf-8')
 			# users can subscribe to hashtag that hasn't been used in a tweet
 			# so create lists in corresponding dicts
