@@ -55,16 +55,12 @@ def main(args):
 
 def clientCommand(clientSocket):
 	# connection established with username
-	socketLock.acquire()
-	socketAvailable.acquire()
-	threading.Thread(target = clientListen, args = [clientSocket]).start()
+	listenThread = threading.Thread(target = clientListen, args = [clientSocket])
+	listenThread.setDaemon(True)
+	listenThread.start()
 	while True:
-		socketLock.release()
-		socketAvailable.release()
 		# get user command
 		prompt = input()
-		socketLock.acquire()
-		socketAvailable.acquire()
 		# split prompt by quotes, gets each parameter
 		data = prompt.split()
 		# check that a prompt was entered
@@ -93,7 +89,7 @@ def clientCommand(clientSocket):
 					print("message length illegal, connection refused.")
 				# put quotes back on tweet because its easier for displaying
 				# the tweets in the desired format later
-				tweet = "\"" + data[1] + "\""
+				tweet = prompt.split("tweet")[1].strip()
 				# handle hashtag
 				hashtag = data[2].strip()
 				split_hash = hashtag.split('#')
@@ -114,7 +110,6 @@ def clientCommand(clientSocket):
 					print('hashtag illegal format, connection refused.')
 				else:
 					# sent cmd
-					tweet = tweet + " " + hashtag
 					clientSocket.send(cmd.encode())
 					tweetbody = [tweet, split_hash]
 					tweetbody = json.dumps(tweetbody)
@@ -190,13 +185,13 @@ def clientCommand(clientSocket):
 def clientListen(clientSocket):
 	while True:
 		try:
-			socketLock.acquire()
-			msg = clientSocket.recv(1024).decode()
-			timeline.append(msg)
-			print(msg)
-			socketLock.release()
+			msgs = clientSocket.recv(1024).decode()
+			msgs = json.loads(msgs)
+			for m in msgs:
+				timeline.append(m)
+				print(m)
 		except Exception as e:
-			socketLock.release()
+			pass
 
 
 

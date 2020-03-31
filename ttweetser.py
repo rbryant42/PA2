@@ -49,7 +49,8 @@ def newClient(connectionSocket, addr, usr):
 		print("IN THREAD" + usr)
 		# empty queue of tweets that user is subscribed to
 		if subscriptionQueue[usr]:
-			connectionSocket.send(subscriptionQueue[usr][0].encode())
+			messageDump = json.dumps(subscriptionQueue[usr])
+			connectionSocket.send(messageDump.encode('utf-8'))
 			subscriptionQueue[usr] = list()
 		# receive client command
 		cmd = connectionSocket.recv(1024).decode()
