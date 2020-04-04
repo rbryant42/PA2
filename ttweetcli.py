@@ -11,7 +11,7 @@ timeline = []
 
 def main(args):
 	# checks number of args
-	if len(args) is not 4:
+	if len(args) != 4:
 		# (5)
 		print(WRONG_PARAMS)
 		sys.exit()
@@ -35,7 +35,7 @@ def main(args):
 	# creates client socket
 	clientSocket = socket(AF_INET, SOCK_STREAM)
 	# attempts to connect to server, exits if not found
-	if clientSocket.connect_ex((serverName, serverPort)) is not 0:
+	if clientSocket.connect_ex((serverName, serverPort)) != 0:
 		print(INVALID_PORT)
 		sys.exit()
 
