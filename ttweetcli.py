@@ -13,7 +13,7 @@ def main(args):
 	# checks number of args
 	if len(args) is not 4:
 		# (5)
-		print('wrong number of parameters, connection refused.')
+		print(WRONG_PARAMS)
 		sys.exit()
 
 	# server IP is second argument
@@ -30,13 +30,13 @@ def main(args):
 	# checks that username only contains alphanumeric characters
 	# (3)
 	if re.search(r'[^a-zA-Z0-9]', username):
-		print('username has wrong format, connection refused.')
+		print(INVALID_USERNAME)
 
 	# creates client socket
 	clientSocket = socket(AF_INET, SOCK_STREAM)
 	# attempts to connect to server, exits if not found
 	if clientSocket.connect_ex((serverName, serverPort)) is not 0:
-		print("server port invalid, connection refused.")
+		print(INVALID_PORT)
 		sys.exit()
 
 	clientSocket.settimeout(0.1)
@@ -45,11 +45,11 @@ def main(args):
 	val = clientSocket.recv(1024).decode()
 	if val == "taken":
 		# (4)
-		print('username illegal, connection refused.')
+		print(USER_ALREADY_LOGGED_IN)
 		sys.exit()
 	else:
 		# (1)
-		print('username legal, connection established.')
+		print(LOGIN_SUCCESS)
 
 	threading.Thread(target = clientCommand, args = [clientSocket]).start()
 
@@ -65,7 +65,7 @@ def clientCommand(clientSocket):
 		data = prompt.split()
 		# check that a prompt was entered
 		if data is None:
-			(5)
+			# (5)
 			print('wrong number of parameters, connection refused.')
 		# command is first argument
 		cmd = data[0]
@@ -81,12 +81,12 @@ def clientCommand(clientSocket):
 				### may be waiting to receive something that it won't
 				# handle message
 				tweet = data[1]
-				if tweet == None:
+				if tweet == None or len(tweet) == 0:
 					# (7)
-					print("message format illegal")
+					print(EMPTY_MSG)
 				if len(tweet) > 150:
 					# (6)
-					print("message length illegal, connection refused.")
+					print(MSG_TOO_LONG)
 				# put quotes back on tweet because its easier for displaying
 				# the tweets in the desired format later
 				tweet = prompt.split("tweet")[1].strip()
@@ -98,16 +98,16 @@ def clientCommand(clientSocket):
 				for s in split_hash:
 					if len(s) > 14 or s == 'ALL':
 						# (8)
-						print('hashtag illegal format, connection refused.')
+						print(ILLEGAL_HASHTAG)
 				if len(split_hash) > 5:
 					# (8)
-					print('hashtag illegal format, connection refused.')
+					print(ILLEGAL_HASHTAG)
 				elif '##' in hashtag:
 					# (8)
-					print('hashtag illegal format, connection refused.')
+					print(ILLEGAL_HASHTAG)
 				elif re.search(r'[^a-zA-Z0-9#]', hashtag):
 					# (8)
-					print('hashtag illegal format, connection refused.')
+					print(ILLEGAL_HASHTAG)
 				else:
 					# sent cmd
 					clientSocket.send(cmd.encode())
@@ -122,9 +122,9 @@ def clientCommand(clientSocket):
 				# server will handle if hashtag is already subscribed to
 				# or user at max subs
 				if len(hashtag) > 15:
-					print('hashtag illegal format, connection refused.')
+					print(ILLEGAL_HASHTAG)
 				elif len(split_hash) > 2:
-					print('hashtag illegal format, connection refused.')
+					print(ILLEGAL_HASHTAG)
 				# re givin me problems for some reason
 				# elif re.search(r'[^a-zA-Z0-9#', hashtag):
 				# 	print("in3")
@@ -145,9 +145,9 @@ def clientCommand(clientSocket):
 				# server will handle if hashtag is already subscribed to
 				# or user at max subs
 				if len(hashtag) > 15:
-					print('hashtag illegal format, connection refused.')
+					print(ILLEGAL_HASHTAG)
 				elif len(split_hash) > 2:
-					print('hashtag illegal format, connection refused.')
+					print(ILLEGAL_HASHTAG)
 				# re givin me problems for some reason
 				# elif re.search(r'[^a-zA-Z0-9#', hashtag):
 				# 	print("in3")
@@ -177,7 +177,7 @@ def clientCommand(clientSocket):
 			clientSocket.send(cmd.encode())
 			clientSocket.close()
 			# (2)
-			print('bye bye')
+			print(EXIT_SUCCESS)
 			break
 		else:
 			print('command invalid, try again.')
