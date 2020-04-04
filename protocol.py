@@ -6,7 +6,7 @@ WRONG_PARAMS = "error: args should contain <ServerIP> <ServerPort> <Username>"
 MSG_TOO_LONG = "message length illegal, connection refused."
 EMPTY_MSG = "message format illegal."
 ILLEGAL_HASHTAG = "hashtag illegal format, connection refused."
-MAX_HASHTAGS= "operation failed: sub <hashtag> failed, already exists or exceeds 3 limitation"
+MAX_HASHTAGS= "operation failed: sub %s failed, already exists or exceeds 3 limitation"
 
 LOGIN_SUCCESS = "username legal, connection established."
 EXIT_SUCCESS = "bye bye"

@@ -134,7 +134,7 @@ def clientCommand(clientSocket):
 					clientSocket.send(hashtag[1:].encode())
 					status = clientSocket.recv(1024).decode()
 					if status == SUB_OR_UNSUB_ERROR:
-						print("operation failed: sub", hashtag, "failed, already exists or exceeds 3 limitation")
+						print(MAX_HASHTAGS % hashtag)
 					elif status == SUB_OR_UNSUB_SUCCESS:
 						print("operation success")
 		elif cmd == 'unsubscribe':
