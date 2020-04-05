@@ -31,6 +31,7 @@ def main(args):
 	# (3)
 	if re.search(r'[^a-zA-Z0-9]', username):
 		print(INVALID_USERNAME)
+		sys.exit()
 
 	# creates client socket
 	clientSocket = socket(AF_INET, SOCK_STREAM)
