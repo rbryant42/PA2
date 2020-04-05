@@ -53,6 +53,39 @@ def main(args):
 
 	threading.Thread(target = clientCommand, args = [clientSocket]).start()
 
+def clientCommand(clientSocket):
+	# connection established with username
+	listenThread = threading.Thread(target = clientListen, args = [clientSocket])
+	listenThread.setDaemon(True)
+	listenThread.start()
+	while True:
+		# get user command
+		prompt = input()
+		# split prompt by quotes, gets each parameter
+		data = prompt.split()
+		# check that a prompt was entered
+		if data is None:
+			# (5)
+			print('wrong number of parameters, connection refused.')
+		# command is first argument
+		cmd = data[0]
+		if cmd == 'tweet':
+			tweet(data, clientSocket)
+		elif cmd == 'subscribe':
+			subscribe(data, clientSocket)
+		elif cmd == 'unsubscribe':
+			unsubscribe(data, clientSocket)
+		elif cmd == 'timeline':
+			gettimeline(data)
+		elif cmd == 'getusers':
+			getusers(data, clientSocket)
+		elif cmd == 'gettweets':
+			gettweets(data)
+		elif cmd == 'exit':
+			texit(clientSocket)
+		else:
+			print('command invalid, try again.')
+
 def tweet(data, clientSocket):
         # split to get actual tweet
         data = prompt.split('"')
@@ -175,39 +208,6 @@ def texit(clientSocket):
         # (2)
         print(EXIT_SUCCESS)
         return
-
-def clientCommand(clientSocket):
-	# connection established with username
-	listenThread = threading.Thread(target = clientListen, args = [clientSocket])
-	listenThread.setDaemon(True)
-	listenThread.start()
-	while True:
-		# get user command
-		prompt = input()
-		# split prompt by quotes, gets each parameter
-		data = prompt.split()
-		# check that a prompt was entered
-		if data is None:
-			# (5)
-			print('wrong number of parameters, connection refused.')
-		# command is first argument
-		cmd = data[0]
-		if cmd == 'tweet':
-			tweet(data, clientSocket)
-		elif cmd == 'subscribe':
-			subscribe(data, clientSocket)
-		elif cmd == 'unsubscribe':
-			unsubscribe(data, clientSocket)
-		elif cmd == 'timeline':
-			gettimeline(data)
-		elif cmd == 'getusers':
-			getusers(data, clientSocket)
-		elif cmd == 'gettweets':
-			gettweets(data)
-		elif cmd == 'exit':
-			texit(clientSocket)
-		else:
-			print('command invalid, try again.')
 
 def clientListen(clientSocket):
 	while True:
