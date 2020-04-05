@@ -20,7 +20,6 @@ def main(args):
 	# NEED TO ERROR CHECK (1)
 	serverName = args[1]
 
-
 	# server port is the third argument
 	serverPort = int(args[2])
 
@@ -53,6 +52,129 @@ def main(args):
 
 	threading.Thread(target = clientCommand, args = [clientSocket]).start()
 
+def tweet(data, clientSocket):
+        # split to get actual tweet
+        data = prompt.split('"')
+        # check that we have 3 arguments
+        if len(data) == 3:
+                # sent cmd
+                # clientSocket.send(cmd.encode())
+                ### Logic comment: Not sure if we should send the command
+                ### before we check for input errors. Then, the server
+                ### may be waiting to receive something that it won't
+                # handle message
+                tweet = data[1]
+                if tweet == None or len(tweet) == 0:
+                        # (7)
+                        print(EMPTY_MSG)
+                if len(tweet) > 150:
+                        # (6)
+                        print(MSG_TOO_LONG)
+                # put quotes back on tweet because its easier for displaying
+                # the tweets in the desired format later
+                tweet = prompt.split("tweet")[1].strip()
+                # handle hashtag
+                hashtag = data[2].strip()
+                split_hash = hashtag.split('#')
+                # gets rid of initial empty string for '#'
+                split_hash = split_hash[1:]
+                for s in split_hash:
+                        if len(s) > 14 or s == 'ALL':
+                                # (8)
+                                print(ILLEGAL_HASHTAG)
+                if len(split_hash) > 5:
+                        # (8)
+                        print(ILLEGAL_HASHTAG)
+                elif '##' in hashtag:
+                        # (8)
+                        print(ILLEGAL_HASHTAG)
+                elif re.search(r'[^a-zA-Z0-9#]', hashtag):
+                        # (8)
+                        print(ILLEGAL_HASHTAG)
+                else:
+                        # sent cmd
+                        clientSocket.send(cmd.encode())
+                        tweetbody = [tweet, split_hash]
+                        tweetbody = json.dumps(tweetbody)
+                        clientSocket.send(tweetbody.encode('utf-8'))
+        return
+
+def subscribe(data, clientSocket):
+        if len(data) == 2:
+                hashtag = data[1].strip()
+                split_hash = hashtag.split('#')
+                # handle hashtag errors in client input format
+                # server will handle if hashtag is already subscribed to
+                # or user at max subs
+                if len(hashtag) > 15:
+                        print(ILLEGAL_HASHTAG)
+                elif len(split_hash) > 2:
+                        print(ILLEGAL_HASHTAG)
+                # re givin me problems for some reason
+                # elif re.search(r'[^a-zA-Z0-9#', hashtag):
+                # 	print("in3")
+                # 	print('hashtag illegal format, connection refused.')
+                else:
+                        clientSocket.send(cmd.encode())
+                        clientSocket.send(hashtag[1:].encode())
+                        status = clientSocket.recv(1024).decode()
+                        if status == SUB_OR_UNSUB_ERROR:
+                                print(MAX_HASHTAGS % hashtag)
+                        elif status == SUB_OR_UNSUB_SUCCESS:
+                                print(SUB_OR_UNSUB_SUCCESS)
+        return
+
+def unsubscribe(data, clientSocket):
+        if len(data) == 2:
+                hashtag = data[1].strip()
+                split_hash = hashtag.split('#')
+                # handle hashtag errors in client input format
+                # server will handle if hashtag is already subscribed to
+                # or user at max subs
+                if len(hashtag) > 15:
+                        print(ILLEGAL_HASHTAG)
+                elif len(split_hash) > 2:
+                        print(ILLEGAL_HASHTAG)
+                # re givin me problems for some reason
+                # elif re.search(r'[^a-zA-Z0-9#', hashtag):
+                # 	print("in3")
+                # 	print('hashtag illegal format, connection refused.')
+                else:
+                        clientSocket.send(cmd.encode())
+                        clientSocket.send(hashtag[1:].encode())
+                        status = clientSocket.recv(1024).decode()
+                        if status == SUB_OR_UNSUB_SUCCESS:
+                                print("operation success")
+        return
+
+def gettimeline(data):
+        if len(data) == 1:
+                for tweet in timeline:
+                        print(tweet)
+        return
+
+def getusers(data, clientSocket):
+        if len(data) == 1:
+                clientSocket.send(cmd.encode())
+                users = clientSocket.recv(1024).decode()
+                users = json.loads(users)
+                for u in users:
+                        print(u)
+        return
+
+def gettweets(data):
+        if len(data) == 2:
+        usr = data[1]
+        print(cmd)
+        return
+
+def texit(clientSocket):
+        clientSocket.send(cmd.encode())
+        clientSocket.close()
+        # (2)
+        print(EXIT_SUCCESS)
+        return
+
 def clientCommand(clientSocket):
 	# connection established with username
 	listenThread = threading.Thread(target = clientListen, args = [clientSocket])
@@ -70,115 +192,19 @@ def clientCommand(clientSocket):
 		# command is first argument
 		cmd = data[0]
 		if cmd == 'tweet':
-			# split to get actual tweet
-			data = prompt.split('"')
-			# check that we have 3 arguments
-			if len(data) == 3:
-				# sent cmd
-				# clientSocket.send(cmd.encode())
-				### Logic comment: Not sure if we should send the command
-				### before we check for input errors. Then, the server
-				### may be waiting to receive something that it won't
-				# handle message
-				tweet = data[1]
-				if tweet == None or len(tweet) == 0:
-					# (7)
-					print(EMPTY_MSG)
-				if len(tweet) > 150:
-					# (6)
-					print(MSG_TOO_LONG)
-				# put quotes back on tweet because its easier for displaying
-				# the tweets in the desired format later
-				tweet = prompt.split("tweet")[1].strip()
-				# handle hashtag
-				hashtag = data[2].strip()
-				split_hash = hashtag.split('#')
-				# gets rid of initial empty string for '#'
-				split_hash = split_hash[1:]
-				for s in split_hash:
-					if len(s) > 14 or s == 'ALL':
-						# (8)
-						print(ILLEGAL_HASHTAG)
-				if len(split_hash) > 5:
-					# (8)
-					print(ILLEGAL_HASHTAG)
-				elif '##' in hashtag:
-					# (8)
-					print(ILLEGAL_HASHTAG)
-				elif re.search(r'[^a-zA-Z0-9#]', hashtag):
-					# (8)
-					print(ILLEGAL_HASHTAG)
-				else:
-					# sent cmd
-					clientSocket.send(cmd.encode())
-					tweetbody = [tweet, split_hash]
-					tweetbody = json.dumps(tweetbody)
-					clientSocket.send(tweetbody.encode('utf-8'))
+			tweet(data, clientSocket)
 		elif cmd == 'subscribe':
-			if len(data) == 2:
-				hashtag = data[1].strip()
-				split_hash = hashtag.split('#')
-				# handle hashtag errors in client input format
-				# server will handle if hashtag is already subscribed to
-				# or user at max subs
-				if len(hashtag) > 15:
-					print(ILLEGAL_HASHTAG)
-				elif len(split_hash) > 2:
-					print(ILLEGAL_HASHTAG)
-				# re givin me problems for some reason
-				# elif re.search(r'[^a-zA-Z0-9#', hashtag):
-				# 	print("in3")
-				# 	print('hashtag illegal format, connection refused.')
-				else:
-					clientSocket.send(cmd.encode())
-					clientSocket.send(hashtag[1:].encode())
-					status = clientSocket.recv(1024).decode()
-					if status == SUB_OR_UNSUB_ERROR:
-						print(MAX_HASHTAGS % hashtag)
-					elif status == SUB_OR_UNSUB_SUCCESS:
-						print("operation success")
+			subscribe(data, clientSocket)
 		elif cmd == 'unsubscribe':
-			if len(data) == 2:
-				hashtag = data[1].strip()
-				split_hash = hashtag.split('#')
-				# handle hashtag errors in client input format
-				# server will handle if hashtag is already subscribed to
-				# or user at max subs
-				if len(hashtag) > 15:
-					print(ILLEGAL_HASHTAG)
-				elif len(split_hash) > 2:
-					print(ILLEGAL_HASHTAG)
-				# re givin me problems for some reason
-				# elif re.search(r'[^a-zA-Z0-9#', hashtag):
-				# 	print("in3")
-				# 	print('hashtag illegal format, connection refused.')
-				else:
-					clientSocket.send(cmd.encode())
-					clientSocket.send(hashtag[1:].encode())
-					status = clientSocket.recv(1024).decode()
-					if status == SUB_OR_UNSUB_SUCCESS:
-						print("operation success")
+			unsubscribe(data, clientSocket)
 		elif cmd == 'timeline':
-			if len(data) == 1:
-				for tweet in timeline:
-					print(tweet)
+			gettimeline(data)
 		elif cmd == 'getusers':
-			if len(data) == 1:
-				clientSocket.send(cmd.encode())
-				users = clientSocket.recv(1024).decode()
-				users = json.loads(users)
-				for u in users:
-					print(u)
+			getusers(data, clientSocket)
 		elif cmd == 'gettweets':
-			if len(data) == 2:
-				usr = data[1]
-			print(cmd)
+			gettweets(data)
 		elif cmd == 'exit':
-			clientSocket.send(cmd.encode())
-			clientSocket.close()
-			# (2)
-			print(EXIT_SUCCESS)
-			break
+			texit(clientSocket)
 		else:
 			print('command invalid, try again.')
 
@@ -192,7 +218,6 @@ def clientListen(clientSocket):
 				print(m)
 		except Exception as e:
 			pass
-
 
 
 if __name__ == '__main__':
