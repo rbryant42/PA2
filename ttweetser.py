@@ -42,16 +42,16 @@ def main(args):
 			threading.Thread(target = newClient, args = (connectionSocket, addr, usr)).start()
 
 def newClient(connectionSocket, addr, usr):
+	sendThread = threading.Thread(target = servSend, args = [connectionSocket, usr])
+	sendThread.setDaemon(True)
+	sendThread.start()
 	# Receive message from client
 	subscriptionCount = 0
 	connected = True
 	while connected:
 		print("IN THREAD" + usr)
 		# empty queue of tweets that user is subscribed to
-		if subscriptionQueue[usr]:
-			messageDump = json.dumps(subscriptionQueue[usr])
-			connectionSocket.send(messageDump.encode('utf-8'))
-			subscriptionQueue[usr] = list()
+
 		# receive client command
 		cmd = connectionSocket.recv(1024).decode()
 		print(cmd)
@@ -121,6 +121,14 @@ def newClient(connectionSocket, addr, usr):
 			users = list(users_and_tweets.keys())
 			users = json.dumps(users)
 			connectionSocket.send(users.encode('utf-8'))
+
+
+def servSend(connectionSocket, usr):
+	while True:
+		if subscriptionQueue[usr]:
+			messageDump = json.dumps(subscriptionQueue[usr])
+			connectionSocket.send(messageDump.encode('utf-8'))
+			subscriptionQueue[usr] = list()
 
 
 if __name__ == '__main__':

@@ -40,7 +40,6 @@ def main(args):
 		print(INVALID_PORT)
 		sys.exit()
 
-	clientSocket.settimeout(0.1)
 	# check if username is taken
 	clientSocket.send(username.encode())
 	val = clientSocket.recv(1024).decode()
@@ -70,6 +69,7 @@ def clientCommand(clientSocket):
 			print('wrong number of parameters, connection refused.')
 		# command is first argument
 		cmd = data[0]
+		clientSocket.send(cmd.encode())
 		if cmd == 'tweet':
 			# split to get actual tweet
 			data = prompt.split('"')
@@ -111,7 +111,6 @@ def clientCommand(clientSocket):
 					print(ILLEGAL_HASHTAG)
 				else:
 					# sent cmd
-					clientSocket.send(cmd.encode())
 					tweetbody = [tweet, split_hash]
 					tweetbody = json.dumps(tweetbody)
 					clientSocket.send(tweetbody.encode('utf-8'))
@@ -131,7 +130,6 @@ def clientCommand(clientSocket):
 				# 	print("in3")
 				# 	print('hashtag illegal format, connection refused.')
 				else:
-					clientSocket.send(cmd.encode())
 					clientSocket.send(hashtag[1:].encode())
 					status = clientSocket.recv(1024).decode()
 					if status == SUB_OR_UNSUB_ERROR:
@@ -154,7 +152,6 @@ def clientCommand(clientSocket):
 				# 	print("in3")
 				# 	print('hashtag illegal format, connection refused.')
 				else:
-					clientSocket.send(cmd.encode())
 					clientSocket.send(hashtag[1:].encode())
 					status = clientSocket.recv(1024).decode()
 					if status == SUB_OR_UNSUB_SUCCESS:
@@ -165,7 +162,6 @@ def clientCommand(clientSocket):
 					print(tweet)
 		elif cmd == 'getusers':
 			if len(data) == 1:
-				clientSocket.send(cmd.encode())
 				users = clientSocket.recv(1024).decode()
 				users = json.loads(users)
 				for u in users:
@@ -175,7 +171,6 @@ def clientCommand(clientSocket):
 				usr = data[1]
 			print(cmd)
 		elif cmd == 'exit':
-			clientSocket.send(cmd.encode())
 			clientSocket.close()
 			# (2)
 			print(EXIT_SUCCESS)
