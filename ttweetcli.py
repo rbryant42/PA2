@@ -18,8 +18,11 @@ def main(args):
 		sys.exit()
 
 	# server IP is second argument
-	# NEED TO ERROR CHECK (1)
+	# (1) Maybe replace function with regex?
 	serverName = args[1]
+	if not validIP(serverName):
+		print(INVALID_IP)
+		sys.exit()
 
 	# server port is the third argument
 	serverPort = int(args[2])
@@ -181,7 +184,17 @@ def clientListen(clientSocket):
 		except Exception as e:
 			pass
 
-
+def validIP(ipAddress):
+	if ipAddress == 'localhost':
+		return True
+	check = ipAddress.split('.')
+	if len(check) != 4:
+		return False
+	for num in check:
+		if int(num) < 0 or int(num) > 255:
+			return False
+		# Add additional checks for ranges?
+	return True
 
 if __name__ == '__main__':
 	main(sys.argv)

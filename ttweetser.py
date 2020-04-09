@@ -9,16 +9,22 @@ import queue
 #DICTIONARY DEFINITIONS: {KEYS: VALUES}
 # {username: list of this user's tweets}
 users_and_tweets = dict()
+
 # {hashtag: list of users subscribed to this hashtag}
 hashtags_and_users = dict()
+
 # {hashtag: list of tweets with this hashtag}
 hashtags_and_tweets = dict()
+
 # {connection: username}
 connections_and_users = {}
+
 # {username: connection}
 users_and_connections = {}
+
 # {connection: queue of messages to be sent on that connection}
 message_queues = {}
+
 # list of connections waiting on output
 outputs = []
 
