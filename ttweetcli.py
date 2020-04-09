@@ -54,12 +54,9 @@ def main(args):
 		print(LOGIN_SUCCESS)
 
 	threading.Thread(target = sendThread, args = [clientSocket]).start()
+	threading.Thread(target = clientListen, args = [clientSocket], daemon = True).start()
 
 def sendThread(clientSocket):
-
-	listenThread = threading.Thread(target = clientListen, args = [clientSocket])
-	listenThread.setDaemon(True)
-	listenThread.start()
 
 	while True:
 		# get user command
@@ -179,6 +176,7 @@ def sendThread(clientSocket):
 def clientListen(clientSocket):
 	while True:
 		try:
+			# 3 cases: sub success or error, tweet, or list of users
 			msg = clientSocket.recv(1024).decode()
 			timeline.append(msg)
 			print(msg)

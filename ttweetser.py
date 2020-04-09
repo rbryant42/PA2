@@ -86,7 +86,7 @@ def command(cmd, data, connectionSocket):
 			outputs.append(connectionSocket)
 			message_queues[connectionSocket].put("*USER*taken".encode())
 			connectionSocket.close()
-			inputs.remove(connectionSocket)
+			#inputs.remove(connectionSocket)
 		elif usr not in users_and_tweets:
 			outputs.append(connectionSocket)
 			message_queues[connectionSocket].put("*USER*valid".encode())
