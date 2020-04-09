@@ -6,6 +6,9 @@ import re
 import threading
 import time
 
+###COMMANDS###
+# tweet is 0, subscribe is 1, unsubscribe is 2, getusers is 3, gettweets is 4, exit is 5
+
 socketLock = threading.Lock()
 socketAvailable = threading.Condition()
 timeline = []
@@ -48,7 +51,7 @@ def main(args):
 		sys.exit()
 
 	#check if username taken
-	msg = "*USER*" + username
+	msg = "6" + username
 	clientSocket.send(msg.encode())
 	val = clientSocket.recv(1024).decode()
 	if val == "*USER*valid":
@@ -106,7 +109,7 @@ def sendThread(clientSocket):
 			# sent cmd
 			tweetbody = [tweet, split_hash]
 			tweetbody = json.dumps(tweetbody)
-			tweetbody = "*TWEET*" + tweetbody
+			tweetbody = "0" + tweetbody
 			clientSocket.send(tweetbody.encode())
 			return
 
@@ -144,7 +147,7 @@ def sendThread(clientSocket):
 				# 	print('hashtag illegal format, connection refused.')
 				else:
 					half = hashtag[1:]
-					msg = "*SUB*" + half
+					msg = "1" + half
 					clientSocket.send(msg.encode())
 		elif cmd == 'unsubscribe':
 			if len(data) == 2:
@@ -162,7 +165,7 @@ def sendThread(clientSocket):
 				# 	print("in3")
 				# 	print('hashtag illegal format, connection refused.')
 				else:
-					msg = "*UNSUB*" + hashtag[1:]
+					msg = "2" + hashtag[1:]
 					clientSocket.send(msg.encode())
 		elif cmd == 'timeline':
 			if len(data) == 1:
@@ -170,18 +173,18 @@ def sendThread(clientSocket):
 					print(tweet)
 		elif cmd == 'getusers':
 			if len(data) == 1:
-				users = clientSocket.recv(1024).decode()
-				users = json.loads(users)
-				for u in users:
-					print(u)
+				msg = "3getusers"
+				clientSocket.send(msg.encode())
 		elif cmd == 'gettweets':
 			if len(data) == 2:
 				usr = data[1]
-			print(cmd)
+				clientSocket.send(("4" + usr).encode())
 		elif cmd == 'exit':
+			clientSocket.send("5".encode())
 			clientSocket.close()
 			# (2)
 			print(EXIT_SUCCESS)
+			sys.exit()
 			break
 		elif cmd == 'adminserverclose':
 			msg = "*adminserverclose*"
@@ -193,9 +196,36 @@ def clientListen(clientSocket):
 	while True:
 		try:
 			# 3 cases: sub success or error, tweet, or list of users
+
 			msg = clientSocket.recv(1024).decode()
-			timeline.append(msg)
-			print(msg)
+			cmd = msg[0]
+
+			# server is sending tweet blast
+
+			if cmd == "0":
+				tweet = msg[1:]
+				timeline.append(tweet)
+				print(tweet)
+
+			# server is sending sub or unsub status
+
+			elif cmd == "1":
+				print(msg[1:])
+			elif cmd == "2":
+				print(msg[1:])
+
+			# server is sending list of users
+
+			elif cmd == "3":
+				users = json.loads(msg[1:])
+				for u in users:
+					print(u)
+			elif cmd == "4":
+				tweets = json.loads(msg[1:])
+				for t in tweets:
+					print(t)
+			elif cmd == "7":
+				print(msg[1:])
 		except Exception as e:
 			pass
 
