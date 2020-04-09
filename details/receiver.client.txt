@@ -1,0 +1,128 @@
+username legal, connection established.
+
+user receiver stdin command: subscribe #9love3251
+operation success
+
+user receiver stdin command: subscribe #8love3251
+operation success
+
+user receiver stdin command: subscribe #7love3251
+operation success
+
+user receiver stdin command: subscribe #6love3251
+operation failed: sub #6love3251 failed, already exists or exceeds 3 limitation
+
+user receiver stdin command: subscribe #5love3251
+operation failed: sub #5love3251 failed, already exists or exceeds 3 limitation
+
+user receiver stdin command: subscribe #4love3251
+operation failed: sub #4love3251 failed, already exists or exceeds 3 limitation
+
+user receiver stdin command: subscribe #3love3251
+operation failed: sub #3love3251 failed, already exists or exceeds 3 limitation
+
+user receiver stdin command: subscribe #2love3251
+operation failed: sub #2love3251 failed, already exists or exceeds 3 limitation
+
+user receiver stdin command: subscribe #1love3251
+operation failed: sub #1love3251 failed, already exists or exceeds 3 limitation
+
+user receiver stdin command: subscribe #0love3251
+operation failed: sub #0love3251 failed, already exists or exceeds 3 limitation
+sender " " #7love3251
+sender " " #8love3251
+sender " " #9love3251
+sender "cs3251" #7love3251
+sender "cs3251" #8love3251
+sender "cs3251" #9love3251
+sender "fsadfsdfd" #7love3251
+sender "fsadfsdfd" #8love3251
+sender "fsadfsdfd" #9love3251
+sender "empty message" #7love3251
+sender "empty message" #8love3251
+sender "empty message" #9love3251
+sender "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #7love3251
+sender "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #8love3251
+sender "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #9love3251
+sender "\0" #7love3251
+sender "\0" #8love3251
+sender "\0" #9love3251
+sender "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #7love3251
+sender "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #8love3251
+sender "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #9love3251
+sender "                                                                                                                                                     " #7love3251
+sender "                                                                                                                                                     " #8love3251
+sender "                                                                                                                                                     " #9love3251
+sender "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #7love3251
+sender "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #8love3251
+sender "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #9love3251
+sender "                                                                                                                                                      " #7love3251
+sender "                                                                                                                                                      " #8love3251
+sender "                                                                                                                                                      " #9love3251
+
+user receiver stdin command: timeline
+sender: " " #7love3251
+sender: " " #8love3251
+sender: " " #9love3251
+sender: "cs3251" #7love3251
+sender: "cs3251" #8love3251
+sender: "cs3251" #9love3251
+sender: "fsadfsdfd" #7love3251
+sender: "fsadfsdfd" #8love3251
+sender: "fsadfsdfd" #9love3251
+sender: "empty message" #7love3251
+sender: "empty message" #8love3251
+sender: "empty message" #9love3251
+sender: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #7love3251
+sender: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #8love3251
+sender: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #9love3251
+sender: "\0" #7love3251
+sender: "\0" #8love3251
+sender: "\0" #9love3251
+sender: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #7love3251
+sender: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #8love3251
+sender: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #9love3251
+sender: "                                                                                                                                                     " #7love3251
+sender: "                                                                                                                                                     " #8love3251
+sender: "                                                                                                                                                     " #9love3251
+sender: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #7love3251
+sender: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #8love3251
+sender: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #9love3251
+sender: "                                                                                                                                                      " #7love3251
+sender: "                                                                                                                                                      " #8love3251
+sender: "                                                                                                                                                      " #9love3251
+
+user receiver stdin command: timeline
+sender: " " #7love3251
+sender: " " #8love3251
+sender: " " #9love3251
+sender: "cs3251" #7love3251
+sender: "cs3251" #8love3251
+sender: "cs3251" #9love3251
+sender: "fsadfsdfd" #7love3251
+sender: "fsadfsdfd" #8love3251
+sender: "fsadfsdfd" #9love3251
+sender: "empty message" #7love3251
+sender: "empty message" #8love3251
+sender: "empty message" #9love3251
+sender: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #7love3251
+sender: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #8love3251
+sender: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #9love3251
+sender: "\0" #7love3251
+sender: "\0" #8love3251
+sender: "\0" #9love3251
+sender: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #7love3251
+sender: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #8love3251
+sender: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #9love3251
+sender: "                                                                                                                                                     " #7love3251
+sender: "                                                                                                                                                     " #8love3251
+sender: "                                                                                                                                                     " #9love3251
+sender: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #7love3251
+sender: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #8love3251
+sender: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #9love3251
+sender: "                                                                                                                                                      " #7love3251
+sender: "                                                                                                                                                      " #8love3251
+sender: "                                                                                                                                                      " #9love3251
+
+user receiver stdin command: exit
+bye bye

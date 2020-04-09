@@ -1,0 +1,344 @@
+username legal, connection established.
+
+user cs32510 stdin command: tweet "" #hash
+message format illegal.
+
+user cs32510 stdin command: tweet "message" #hash
+
+user cs32510 stdin command: tweet "message message" #hash
+
+user cs32510 stdin command: subscribe #echo
+operation success
+
+user cs32510 stdin command: tweet " " #echo
+cs32510 " " #echo
+cs32511 " " #echo
+cs32512 " " #echo
+cs32513 " " #echo
+cs32514 " " #echo
+
+user cs32510 stdin command: tweet "cs3251" #echo
+cs32510 "cs3251" #echo
+cs32511 "cs3251" #echo
+cs32512 "cs3251" #echo
+cs32513 "cs3251" #echo
+cs32514 "cs3251" #echo
+
+user cs32510 stdin command: tweet "fsadfsdfd" #echo
+cs32510 "fsadfsdfd" #echo
+cs32511 "fsadfsdfd" #echo
+cs32512 "fsadfsdfd" #echo
+cs32513 "fsadfsdfd" #echo
+cs32514 "fsadfsdfd" #echo
+
+user cs32510 stdin command: tweet "empty message" #echo
+cs32510 "empty message" #echo
+cs32511 "empty message" #echo
+cs32512 "empty message" #echo
+cs32513 "empty message" #echo
+cs32514 "empty message" #echo
+
+user cs32510 stdin command: tweet "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32510 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32511 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32512 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32513 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32514 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+
+user cs32510 stdin command: tweet "\0" #echo
+cs32510 "\0" #echo
+cs32511 "\0" #echo
+cs32512 "\0" #echo
+cs32513 "\0" #echo
+cs32514 "\0" #echo
+
+user cs32510 stdin command: tweet "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32510 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32511 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32512 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32513 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32514 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+
+user cs32510 stdin command: tweet "                                                                                                                                                     " #echo
+cs32510 "                                                                                                                                                     " #echo
+cs32511 "                                                                                                                                                     " #echo
+cs32512 "                                                                                                                                                     " #echo
+cs32513 "                                                                                                                                                     " #echo
+cs32514 "                                                                                                                                                     " #echo
+
+user cs32510 stdin command: tweet "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32510 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32511 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32512 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32513 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32514 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+
+user cs32510 stdin command: tweet "                                                                                                                                                      " #echo
+cs32510 "                                                                                                                                                      " #echo
+cs32511 "                                                                                                                                                      " #echo
+cs32512 "                                                                                                                                                      " #echo
+cs32513 "                                                                                                                                                      " #echo
+cs32514 "                                                                                                                                                      " #echo
+
+user cs32510 stdin command: tweet "151aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+message length illegal, connection refused.
+
+user cs32510 stdin command: unsubscribe #echo
+operation success
+
+user cs32510 stdin command: tweet " " #echo
+
+user cs32510 stdin command: tweet "cs3251" #echo
+
+user cs32510 stdin command: tweet "fsadfsdfd" #echo
+
+user cs32510 stdin command: tweet "empty message" #echo
+
+user cs32510 stdin command: tweet "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+
+user cs32510 stdin command: tweet "\0" #echo
+
+user cs32510 stdin command: tweet "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+
+user cs32510 stdin command: tweet "                                                                                                                                                     " #echo
+
+user cs32510 stdin command: tweet "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+
+user cs32510 stdin command: tweet "                                                                                                                                                      " #echo
+
+user cs32510 stdin command: tweet "151aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+message length illegal, connection refused.
+
+user cs32510 stdin command: timeline
+cs32510: " " #echo
+cs32511: " " #echo
+cs32512: " " #echo
+cs32513: " " #echo
+cs32514: " " #echo
+cs32510: "cs3251" #echo
+cs32511: "cs3251" #echo
+cs32512: "cs3251" #echo
+cs32513: "cs3251" #echo
+cs32514: "cs3251" #echo
+cs32510: "fsadfsdfd" #echo
+cs32511: "fsadfsdfd" #echo
+cs32512: "fsadfsdfd" #echo
+cs32513: "fsadfsdfd" #echo
+cs32514: "fsadfsdfd" #echo
+cs32510: "empty message" #echo
+cs32511: "empty message" #echo
+cs32512: "empty message" #echo
+cs32513: "empty message" #echo
+cs32514: "empty message" #echo
+cs32510: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32511: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32512: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32513: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32514: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32510: "\0" #echo
+cs32511: "\0" #echo
+cs32512: "\0" #echo
+cs32513: "\0" #echo
+cs32514: "\0" #echo
+cs32510: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32511: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32512: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32513: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32514: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32510: "                                                                                                                                                     " #echo
+cs32511: "                                                                                                                                                     " #echo
+cs32512: "                                                                                                                                                     " #echo
+cs32513: "                                                                                                                                                     " #echo
+cs32514: "                                                                                                                                                     " #echo
+cs32510: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32511: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32512: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32513: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32514: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32510: "                                                                                                                                                      " #echo
+cs32511: "                                                                                                                                                      " #echo
+cs32512: "                                                                                                                                                      " #echo
+cs32513: "                                                                                                                                                      " #echo
+cs32514: "                                                                                                                                                      " #echo
+
+user cs32510 stdin command: timeline
+cs32510: " " #echo
+cs32511: " " #echo
+cs32512: " " #echo
+cs32513: " " #echo
+cs32514: " " #echo
+cs32510: "cs3251" #echo
+cs32511: "cs3251" #echo
+cs32512: "cs3251" #echo
+cs32513: "cs3251" #echo
+cs32514: "cs3251" #echo
+cs32510: "fsadfsdfd" #echo
+cs32511: "fsadfsdfd" #echo
+cs32512: "fsadfsdfd" #echo
+cs32513: "fsadfsdfd" #echo
+cs32514: "fsadfsdfd" #echo
+cs32510: "empty message" #echo
+cs32511: "empty message" #echo
+cs32512: "empty message" #echo
+cs32513: "empty message" #echo
+cs32514: "empty message" #echo
+cs32510: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32511: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32512: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32513: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32514: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32510: "\0" #echo
+cs32511: "\0" #echo
+cs32512: "\0" #echo
+cs32513: "\0" #echo
+cs32514: "\0" #echo
+cs32510: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32511: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32512: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32513: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32514: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32510: "                                                                                                                                                     " #echo
+cs32511: "                                                                                                                                                     " #echo
+cs32512: "                                                                                                                                                     " #echo
+cs32513: "                                                                                                                                                     " #echo
+cs32514: "                                                                                                                                                     " #echo
+cs32510: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32511: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32512: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32513: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32514: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32510: "                                                                                                                                                      " #echo
+cs32511: "                                                                                                                                                      " #echo
+cs32512: "                                                                                                                                                      " #echo
+cs32513: "                                                                                                                                                      " #echo
+cs32514: "                                                                                                                                                      " #echo
+
+user cs32510 stdin command: getusers
+cs32513
+cs32514
+cs32510
+cs32511
+cs32512
+
+user cs32510 stdin command: gettweets cs32510
+cs32510: "message" #hash
+cs32510: "message message" #hash
+cs32510: " " #echo
+cs32510: "cs3251" #echo
+cs32510: "fsadfsdfd" #echo
+cs32510: "empty message" #echo
+cs32510: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32510: "\0" #echo
+cs32510: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32510: "                                                                                                                                                     " #echo
+cs32510: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32510: "                                                                                                                                                      " #echo
+cs32510: " " #echo
+cs32510: "cs3251" #echo
+cs32510: "fsadfsdfd" #echo
+cs32510: "empty message" #echo
+cs32510: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32510: "\0" #echo
+cs32510: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32510: "                                                                                                                                                     " #echo
+cs32510: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32510: "                                                                                                                                                      " #echo
+
+user cs32510 stdin command: gettweets cs32511
+cs32511: "message" #hash
+cs32511: "message message" #hash
+cs32511: " " #echo
+cs32511: "cs3251" #echo
+cs32511: "fsadfsdfd" #echo
+cs32511: "empty message" #echo
+cs32511: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32511: "\0" #echo
+cs32511: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32511: "                                                                                                                                                     " #echo
+cs32511: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32511: "                                                                                                                                                      " #echo
+cs32511: " " #echo
+cs32511: "cs3251" #echo
+cs32511: "fsadfsdfd" #echo
+cs32511: "empty message" #echo
+cs32511: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32511: "\0" #echo
+cs32511: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32511: "                                                                                                                                                     " #echo
+cs32511: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32511: "                                                                                                                                                      " #echo
+
+user cs32510 stdin command: gettweets cs32512
+cs32512: "message" #hash
+cs32512: "message message" #hash
+cs32512: " " #echo
+cs32512: "cs3251" #echo
+cs32512: "fsadfsdfd" #echo
+cs32512: "empty message" #echo
+cs32512: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32512: "\0" #echo
+cs32512: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32512: "                                                                                                                                                     " #echo
+cs32512: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32512: "                                                                                                                                                      " #echo
+cs32512: " " #echo
+cs32512: "cs3251" #echo
+cs32512: "fsadfsdfd" #echo
+cs32512: "empty message" #echo
+cs32512: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32512: "\0" #echo
+cs32512: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32512: "                                                                                                                                                     " #echo
+cs32512: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32512: "                                                                                                                                                      " #echo
+
+user cs32510 stdin command: gettweets cs32513
+cs32513: "message" #hash
+cs32513: "message message" #hash
+cs32513: " " #echo
+cs32513: "cs3251" #echo
+cs32513: "fsadfsdfd" #echo
+cs32513: "empty message" #echo
+cs32513: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32513: "\0" #echo
+cs32513: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32513: "                                                                                                                                                     " #echo
+cs32513: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32513: "                                                                                                                                                      " #echo
+cs32513: " " #echo
+cs32513: "cs3251" #echo
+cs32513: "fsadfsdfd" #echo
+cs32513: "empty message" #echo
+cs32513: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32513: "\0" #echo
+cs32513: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32513: "                                                                                                                                                     " #echo
+cs32513: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32513: "                                                                                                                                                      " #echo
+
+user cs32510 stdin command: gettweets cs32514
+cs32514: "message" #hash
+cs32514: "message message" #hash
+cs32514: " " #echo
+cs32514: "cs3251" #echo
+cs32514: "fsadfsdfd" #echo
+cs32514: "empty message" #echo
+cs32514: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32514: "\0" #echo
+cs32514: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32514: "                                                                                                                                                     " #echo
+cs32514: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32514: "                                                                                                                                                      " #echo
+cs32514: " " #echo
+cs32514: "cs3251" #echo
+cs32514: "fsadfsdfd" #echo
+cs32514: "empty message" #echo
+cs32514: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #echo
+cs32514: "\0" #echo
+cs32514: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32514: "                                                                                                                                                     " #echo
+cs32514: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #echo
+cs32514: "                                                                                                                                                      " #echo
+
+user cs32510 stdin command: exit
+bye bye

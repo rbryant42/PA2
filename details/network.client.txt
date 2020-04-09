@@ -1,0 +1,494 @@
+username legal, connection established.
+
+user network stdin command: subscribe #ALL
+operation success
+network0 " " #0#1
+network0 "cs3251" #0#1
+network0 "fsadfsdfd" #0#1
+network0 "empty message" #0#1
+network0 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #0#1
+network0 "\0" #0#1
+network0 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network0 "                                                                                                                                                     " #0#1
+network0 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network0 "                                                                                                                                                      " #0#1
+network0 " " #1#2
+network0 "cs3251" #1#2
+network0 "fsadfsdfd" #1#2
+network0 "empty message" #1#2
+network0 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #1#2
+network0 "\0" #1#2
+network0 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network0 "                                                                                                                                                     " #1#2
+network0 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network0 "                                                                                                                                                      " #1#2
+network0 " " #2#3
+network0 "cs3251" #2#3
+network0 "fsadfsdfd" #2#3
+network0 "empty message" #2#3
+network0 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #2#3
+network0 "\0" #2#3
+network0 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network0 "                                                                                                                                                     " #2#3
+network0 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network0 "                                                                                                                                                      " #2#3
+network0 " " #3#0
+network0 "cs3251" #3#0
+network0 "fsadfsdfd" #3#0
+network0 "empty message" #3#0
+network0 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #3#0
+network0 "\0" #3#0
+network0 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network0 "                                                                                                                                                     " #3#0
+network0 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network0 "                                                                                                                                                      " #3#0
+network1 " " #0#1
+network1 "cs3251" #0#1
+network1 "fsadfsdfd" #0#1
+network1 "empty message" #0#1
+network1 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #0#1
+network1 "\0" #0#1
+network1 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network1 "                                                                                                                                                     " #0#1
+network1 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network1 "                                                                                                                                                      " #0#1
+network1 " " #1#2
+network1 "cs3251" #1#2
+network1 "fsadfsdfd" #1#2
+network1 "empty message" #1#2
+network1 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #1#2
+network1 "\0" #1#2
+network1 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network1 "                                                                                                                                                     " #1#2
+network1 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network1 "                                                                                                                                                      " #1#2
+network1 " " #2#3
+network1 "cs3251" #2#3
+network1 "fsadfsdfd" #2#3
+network1 "empty message" #2#3
+network1 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #2#3
+network1 "\0" #2#3
+network1 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network1 "                                                                                                                                                     " #2#3
+network1 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network1 "                                                                                                                                                      " #2#3
+network1 " " #3#0
+network1 "cs3251" #3#0
+network1 "fsadfsdfd" #3#0
+network1 "empty message" #3#0
+network1 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #3#0
+network1 "\0" #3#0
+network1 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network1 "                                                                                                                                                     " #3#0
+network1 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network1 "                                                                                                                                                      " #3#0
+network2 " " #0#1
+network2 "cs3251" #0#1
+network2 "fsadfsdfd" #0#1
+network2 "empty message" #0#1
+network2 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #0#1
+network2 "\0" #0#1
+network2 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network2 "                                                                                                                                                     " #0#1
+network2 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network2 "                                                                                                                                                      " #0#1
+network2 " " #1#2
+network2 "cs3251" #1#2
+network2 "fsadfsdfd" #1#2
+network2 "empty message" #1#2
+network2 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #1#2
+network2 "\0" #1#2
+network2 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network2 "                                                                                                                                                     " #1#2
+network2 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network2 "                                                                                                                                                      " #1#2
+network2 " " #2#3
+network2 "cs3251" #2#3
+network2 "fsadfsdfd" #2#3
+network2 "empty message" #2#3
+network2 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #2#3
+network2 "\0" #2#3
+network2 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network2 "                                                                                                                                                     " #2#3
+network2 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network2 "                                                                                                                                                      " #2#3
+network2 " " #3#0
+network2 "cs3251" #3#0
+network2 "fsadfsdfd" #3#0
+network2 "empty message" #3#0
+network2 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #3#0
+network2 "\0" #3#0
+network2 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network2 "                                                                                                                                                     " #3#0
+network2 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network2 "                                                                                                                                                      " #3#0
+network3 " " #0#1
+network3 "cs3251" #0#1
+network3 "fsadfsdfd" #0#1
+network3 "empty message" #0#1
+network3 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #0#1
+network3 "\0" #0#1
+network3 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network3 "                                                                                                                                                     " #0#1
+network3 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network3 "                                                                                                                                                      " #0#1
+network3 " " #1#2
+network3 "cs3251" #1#2
+network3 "fsadfsdfd" #1#2
+network3 "empty message" #1#2
+network3 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #1#2
+network3 "\0" #1#2
+network3 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network3 "                                                                                                                                                     " #1#2
+network3 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network3 "                                                                                                                                                      " #1#2
+network3 " " #2#3
+network3 "cs3251" #2#3
+network3 "fsadfsdfd" #2#3
+network3 "empty message" #2#3
+network3 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #2#3
+network3 "\0" #2#3
+network3 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network3 "                                                                                                                                                     " #2#3
+network3 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network3 "                                                                                                                                                      " #2#3
+network3 " " #3#0
+network3 "cs3251" #3#0
+network3 "fsadfsdfd" #3#0
+network3 "empty message" #3#0
+network3 "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #3#0
+network3 "\0" #3#0
+network3 "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network3 "                                                                                                                                                     " #3#0
+network3 "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network3 "                                                                                                                                                      " #3#0
+
+user network stdin command: unsubscribe #ALL
+operation success
+
+user network stdin command: timeline
+network0: " " #0#1
+network0: "cs3251" #0#1
+network0: "fsadfsdfd" #0#1
+network0: "empty message" #0#1
+network0: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #0#1
+network0: "\0" #0#1
+network0: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network0: "                                                                                                                                                     " #0#1
+network0: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network0: "                                                                                                                                                      " #0#1
+network0: " " #1#2
+network0: "cs3251" #1#2
+network0: "fsadfsdfd" #1#2
+network0: "empty message" #1#2
+network0: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #1#2
+network0: "\0" #1#2
+network0: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network0: "                                                                                                                                                     " #1#2
+network0: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network0: "                                                                                                                                                      " #1#2
+network0: " " #2#3
+network0: "cs3251" #2#3
+network0: "fsadfsdfd" #2#3
+network0: "empty message" #2#3
+network0: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #2#3
+network0: "\0" #2#3
+network0: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network0: "                                                                                                                                                     " #2#3
+network0: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network0: "                                                                                                                                                      " #2#3
+network0: " " #3#0
+network0: "cs3251" #3#0
+network0: "fsadfsdfd" #3#0
+network0: "empty message" #3#0
+network0: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #3#0
+network0: "\0" #3#0
+network0: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network0: "                                                                                                                                                     " #3#0
+network0: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network0: "                                                                                                                                                      " #3#0
+network1: " " #0#1
+network1: "cs3251" #0#1
+network1: "fsadfsdfd" #0#1
+network1: "empty message" #0#1
+network1: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #0#1
+network1: "\0" #0#1
+network1: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network1: "                                                                                                                                                     " #0#1
+network1: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network1: "                                                                                                                                                      " #0#1
+network1: " " #1#2
+network1: "cs3251" #1#2
+network1: "fsadfsdfd" #1#2
+network1: "empty message" #1#2
+network1: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #1#2
+network1: "\0" #1#2
+network1: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network1: "                                                                                                                                                     " #1#2
+network1: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network1: "                                                                                                                                                      " #1#2
+network1: " " #2#3
+network1: "cs3251" #2#3
+network1: "fsadfsdfd" #2#3
+network1: "empty message" #2#3
+network1: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #2#3
+network1: "\0" #2#3
+network1: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network1: "                                                                                                                                                     " #2#3
+network1: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network1: "                                                                                                                                                      " #2#3
+network1: " " #3#0
+network1: "cs3251" #3#0
+network1: "fsadfsdfd" #3#0
+network1: "empty message" #3#0
+network1: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #3#0
+network1: "\0" #3#0
+network1: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network1: "                                                                                                                                                     " #3#0
+network1: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network1: "                                                                                                                                                      " #3#0
+network2: " " #0#1
+network2: "cs3251" #0#1
+network2: "fsadfsdfd" #0#1
+network2: "empty message" #0#1
+network2: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #0#1
+network2: "\0" #0#1
+network2: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network2: "                                                                                                                                                     " #0#1
+network2: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network2: "                                                                                                                                                      " #0#1
+network2: " " #1#2
+network2: "cs3251" #1#2
+network2: "fsadfsdfd" #1#2
+network2: "empty message" #1#2
+network2: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #1#2
+network2: "\0" #1#2
+network2: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network2: "                                                                                                                                                     " #1#2
+network2: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network2: "                                                                                                                                                      " #1#2
+network2: " " #2#3
+network2: "cs3251" #2#3
+network2: "fsadfsdfd" #2#3
+network2: "empty message" #2#3
+network2: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #2#3
+network2: "\0" #2#3
+network2: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network2: "                                                                                                                                                     " #2#3
+network2: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network2: "                                                                                                                                                      " #2#3
+network2: " " #3#0
+network2: "cs3251" #3#0
+network2: "fsadfsdfd" #3#0
+network2: "empty message" #3#0
+network2: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #3#0
+network2: "\0" #3#0
+network2: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network2: "                                                                                                                                                     " #3#0
+network2: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network2: "                                                                                                                                                      " #3#0
+network3: " " #0#1
+network3: "cs3251" #0#1
+network3: "fsadfsdfd" #0#1
+network3: "empty message" #0#1
+network3: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #0#1
+network3: "\0" #0#1
+network3: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network3: "                                                                                                                                                     " #0#1
+network3: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network3: "                                                                                                                                                      " #0#1
+network3: " " #1#2
+network3: "cs3251" #1#2
+network3: "fsadfsdfd" #1#2
+network3: "empty message" #1#2
+network3: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #1#2
+network3: "\0" #1#2
+network3: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network3: "                                                                                                                                                     " #1#2
+network3: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network3: "                                                                                                                                                      " #1#2
+network3: " " #2#3
+network3: "cs3251" #2#3
+network3: "fsadfsdfd" #2#3
+network3: "empty message" #2#3
+network3: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #2#3
+network3: "\0" #2#3
+network3: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network3: "                                                                                                                                                     " #2#3
+network3: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network3: "                                                                                                                                                      " #2#3
+network3: " " #3#0
+network3: "cs3251" #3#0
+network3: "fsadfsdfd" #3#0
+network3: "empty message" #3#0
+network3: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #3#0
+network3: "\0" #3#0
+network3: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network3: "                                                                                                                                                     " #3#0
+network3: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network3: "                                                                                                                                                      " #3#0
+
+user network stdin command: timeline
+network0: " " #0#1
+network0: "cs3251" #0#1
+network0: "fsadfsdfd" #0#1
+network0: "empty message" #0#1
+network0: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #0#1
+network0: "\0" #0#1
+network0: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network0: "                                                                                                                                                     " #0#1
+network0: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network0: "                                                                                                                                                      " #0#1
+network0: " " #1#2
+network0: "cs3251" #1#2
+network0: "fsadfsdfd" #1#2
+network0: "empty message" #1#2
+network0: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #1#2
+network0: "\0" #1#2
+network0: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network0: "                                                                                                                                                     " #1#2
+network0: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network0: "                                                                                                                                                      " #1#2
+network0: " " #2#3
+network0: "cs3251" #2#3
+network0: "fsadfsdfd" #2#3
+network0: "empty message" #2#3
+network0: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #2#3
+network0: "\0" #2#3
+network0: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network0: "                                                                                                                                                     " #2#3
+network0: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network0: "                                                                                                                                                      " #2#3
+network0: " " #3#0
+network0: "cs3251" #3#0
+network0: "fsadfsdfd" #3#0
+network0: "empty message" #3#0
+network0: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #3#0
+network0: "\0" #3#0
+network0: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network0: "                                                                                                                                                     " #3#0
+network0: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network0: "                                                                                                                                                      " #3#0
+network1: " " #0#1
+network1: "cs3251" #0#1
+network1: "fsadfsdfd" #0#1
+network1: "empty message" #0#1
+network1: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #0#1
+network1: "\0" #0#1
+network1: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network1: "                                                                                                                                                     " #0#1
+network1: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network1: "                                                                                                                                                      " #0#1
+network1: " " #1#2
+network1: "cs3251" #1#2
+network1: "fsadfsdfd" #1#2
+network1: "empty message" #1#2
+network1: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #1#2
+network1: "\0" #1#2
+network1: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network1: "                                                                                                                                                     " #1#2
+network1: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network1: "                                                                                                                                                      " #1#2
+network1: " " #2#3
+network1: "cs3251" #2#3
+network1: "fsadfsdfd" #2#3
+network1: "empty message" #2#3
+network1: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #2#3
+network1: "\0" #2#3
+network1: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network1: "                                                                                                                                                     " #2#3
+network1: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network1: "                                                                                                                                                      " #2#3
+network1: " " #3#0
+network1: "cs3251" #3#0
+network1: "fsadfsdfd" #3#0
+network1: "empty message" #3#0
+network1: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #3#0
+network1: "\0" #3#0
+network1: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network1: "                                                                                                                                                     " #3#0
+network1: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network1: "                                                                                                                                                      " #3#0
+network2: " " #0#1
+network2: "cs3251" #0#1
+network2: "fsadfsdfd" #0#1
+network2: "empty message" #0#1
+network2: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #0#1
+network2: "\0" #0#1
+network2: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network2: "                                                                                                                                                     " #0#1
+network2: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network2: "                                                                                                                                                      " #0#1
+network2: " " #1#2
+network2: "cs3251" #1#2
+network2: "fsadfsdfd" #1#2
+network2: "empty message" #1#2
+network2: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #1#2
+network2: "\0" #1#2
+network2: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network2: "                                                                                                                                                     " #1#2
+network2: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network2: "                                                                                                                                                      " #1#2
+network2: " " #2#3
+network2: "cs3251" #2#3
+network2: "fsadfsdfd" #2#3
+network2: "empty message" #2#3
+network2: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #2#3
+network2: "\0" #2#3
+network2: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network2: "                                                                                                                                                     " #2#3
+network2: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network2: "                                                                                                                                                      " #2#3
+network2: " " #3#0
+network2: "cs3251" #3#0
+network2: "fsadfsdfd" #3#0
+network2: "empty message" #3#0
+network2: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #3#0
+network2: "\0" #3#0
+network2: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network2: "                                                                                                                                                     " #3#0
+network2: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network2: "                                                                                                                                                      " #3#0
+network3: " " #0#1
+network3: "cs3251" #0#1
+network3: "fsadfsdfd" #0#1
+network3: "empty message" #0#1
+network3: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #0#1
+network3: "\0" #0#1
+network3: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network3: "                                                                                                                                                     " #0#1
+network3: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0#1
+network3: "                                                                                                                                                      " #0#1
+network3: " " #1#2
+network3: "cs3251" #1#2
+network3: "fsadfsdfd" #1#2
+network3: "empty message" #1#2
+network3: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #1#2
+network3: "\0" #1#2
+network3: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network3: "                                                                                                                                                     " #1#2
+network3: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1#2
+network3: "                                                                                                                                                      " #1#2
+network3: " " #2#3
+network3: "cs3251" #2#3
+network3: "fsadfsdfd" #2#3
+network3: "empty message" #2#3
+network3: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #2#3
+network3: "\0" #2#3
+network3: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network3: "                                                                                                                                                     " #2#3
+network3: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2#3
+network3: "                                                                                                                                                      " #2#3
+network3: " " #3#0
+network3: "cs3251" #3#0
+network3: "fsadfsdfd" #3#0
+network3: "empty message" #3#0
+network3: "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #3#0
+network3: "\0" #3#0
+network3: "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network3: "                                                                                                                                                     " #3#0
+network3: "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3#0
+network3: "                                                                                                                                                      " #3#0
+
+user network stdin command: exit
+bye bye

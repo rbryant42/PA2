@@ -1,0 +1,234 @@
+username legal, connection established.
+
+user sender stdin command: tweet " " #0love3251
+
+user sender stdin command: tweet " " #1love3251
+
+user sender stdin command: tweet " " #2love3251
+
+user sender stdin command: tweet " " #3love3251
+
+user sender stdin command: tweet " " #4love3251
+
+user sender stdin command: tweet " " #5love3251
+
+user sender stdin command: tweet " " #6love3251
+
+user sender stdin command: tweet " " #7love3251
+
+user sender stdin command: tweet " " #8love3251
+
+user sender stdin command: tweet " " #9love3251
+
+user sender stdin command: tweet "cs3251" #0love3251
+
+user sender stdin command: tweet "cs3251" #1love3251
+
+user sender stdin command: tweet "cs3251" #2love3251
+
+user sender stdin command: tweet "cs3251" #3love3251
+
+user sender stdin command: tweet "cs3251" #4love3251
+
+user sender stdin command: tweet "cs3251" #5love3251
+
+user sender stdin command: tweet "cs3251" #6love3251
+
+user sender stdin command: tweet "cs3251" #7love3251
+
+user sender stdin command: tweet "cs3251" #8love3251
+
+user sender stdin command: tweet "cs3251" #9love3251
+
+user sender stdin command: tweet "fsadfsdfd" #0love3251
+
+user sender stdin command: tweet "fsadfsdfd" #1love3251
+
+user sender stdin command: tweet "fsadfsdfd" #2love3251
+
+user sender stdin command: tweet "fsadfsdfd" #3love3251
+
+user sender stdin command: tweet "fsadfsdfd" #4love3251
+
+user sender stdin command: tweet "fsadfsdfd" #5love3251
+
+user sender stdin command: tweet "fsadfsdfd" #6love3251
+
+user sender stdin command: tweet "fsadfsdfd" #7love3251
+
+user sender stdin command: tweet "fsadfsdfd" #8love3251
+
+user sender stdin command: tweet "fsadfsdfd" #9love3251
+
+user sender stdin command: tweet "empty message" #0love3251
+
+user sender stdin command: tweet "empty message" #1love3251
+
+user sender stdin command: tweet "empty message" #2love3251
+
+user sender stdin command: tweet "empty message" #3love3251
+
+user sender stdin command: tweet "empty message" #4love3251
+
+user sender stdin command: tweet "empty message" #5love3251
+
+user sender stdin command: tweet "empty message" #6love3251
+
+user sender stdin command: tweet "empty message" #7love3251
+
+user sender stdin command: tweet "empty message" #8love3251
+
+user sender stdin command: tweet "empty message" #9love3251
+
+user sender stdin command: tweet "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #0love3251
+
+user sender stdin command: tweet "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #1love3251
+
+user sender stdin command: tweet "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #2love3251
+
+user sender stdin command: tweet "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #3love3251
+
+user sender stdin command: tweet "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #4love3251
+
+user sender stdin command: tweet "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #5love3251
+
+user sender stdin command: tweet "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #6love3251
+
+user sender stdin command: tweet "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #7love3251
+
+user sender stdin command: tweet "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #8love3251
+
+user sender stdin command: tweet "~!@#$%^&*()_+-=[]{};:.,<>/?|\" #9love3251
+
+user sender stdin command: tweet "\0" #0love3251
+
+user sender stdin command: tweet "\0" #1love3251
+
+user sender stdin command: tweet "\0" #2love3251
+
+user sender stdin command: tweet "\0" #3love3251
+
+user sender stdin command: tweet "\0" #4love3251
+
+user sender stdin command: tweet "\0" #5love3251
+
+user sender stdin command: tweet "\0" #6love3251
+
+user sender stdin command: tweet "\0" #7love3251
+
+user sender stdin command: tweet "\0" #8love3251
+
+user sender stdin command: tweet "\0" #9love3251
+
+user sender stdin command: tweet "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0love3251
+
+user sender stdin command: tweet "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1love3251
+
+user sender stdin command: tweet "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2love3251
+
+user sender stdin command: tweet "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3love3251
+
+user sender stdin command: tweet "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #4love3251
+
+user sender stdin command: tweet "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #5love3251
+
+user sender stdin command: tweet "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #6love3251
+
+user sender stdin command: tweet "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #7love3251
+
+user sender stdin command: tweet "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #8love3251
+
+user sender stdin command: tweet "149aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #9love3251
+
+user sender stdin command: tweet "                                                                                                                                                     " #0love3251
+
+user sender stdin command: tweet "                                                                                                                                                     " #1love3251
+
+user sender stdin command: tweet "                                                                                                                                                     " #2love3251
+
+user sender stdin command: tweet "                                                                                                                                                     " #3love3251
+
+user sender stdin command: tweet "                                                                                                                                                     " #4love3251
+
+user sender stdin command: tweet "                                                                                                                                                     " #5love3251
+
+user sender stdin command: tweet "                                                                                                                                                     " #6love3251
+
+user sender stdin command: tweet "                                                                                                                                                     " #7love3251
+
+user sender stdin command: tweet "                                                                                                                                                     " #8love3251
+
+user sender stdin command: tweet "                                                                                                                                                     " #9love3251
+
+user sender stdin command: tweet "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0love3251
+
+user sender stdin command: tweet "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1love3251
+
+user sender stdin command: tweet "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2love3251
+
+user sender stdin command: tweet "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3love3251
+
+user sender stdin command: tweet "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #4love3251
+
+user sender stdin command: tweet "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #5love3251
+
+user sender stdin command: tweet "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #6love3251
+
+user sender stdin command: tweet "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #7love3251
+
+user sender stdin command: tweet "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #8love3251
+
+user sender stdin command: tweet "150aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #9love3251
+
+user sender stdin command: tweet "                                                                                                                                                      " #0love3251
+
+user sender stdin command: tweet "                                                                                                                                                      " #1love3251
+
+user sender stdin command: tweet "                                                                                                                                                      " #2love3251
+
+user sender stdin command: tweet "                                                                                                                                                      " #3love3251
+
+user sender stdin command: tweet "                                                                                                                                                      " #4love3251
+
+user sender stdin command: tweet "                                                                                                                                                      " #5love3251
+
+user sender stdin command: tweet "                                                                                                                                                      " #6love3251
+
+user sender stdin command: tweet "                                                                                                                                                      " #7love3251
+
+user sender stdin command: tweet "                                                                                                                                                      " #8love3251
+
+user sender stdin command: tweet "                                                                                                                                                      " #9love3251
+
+user sender stdin command: tweet "151aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #0love3251
+message length illegal, connection refused.
+
+user sender stdin command: tweet "151aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #1love3251
+message length illegal, connection refused.
+
+user sender stdin command: tweet "151aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #2love3251
+message length illegal, connection refused.
+
+user sender stdin command: tweet "151aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #3love3251
+message length illegal, connection refused.
+
+user sender stdin command: tweet "151aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #4love3251
+message length illegal, connection refused.
+
+user sender stdin command: tweet "151aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #5love3251
+message length illegal, connection refused.
+
+user sender stdin command: tweet "151aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #6love3251
+message length illegal, connection refused.
+
+user sender stdin command: tweet "151aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #7love3251
+message length illegal, connection refused.
+
+user sender stdin command: tweet "151aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #8love3251
+message length illegal, connection refused.
+
+user sender stdin command: tweet "151aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" #9love3251
+message length illegal, connection refused.
+
+user sender stdin command: exit
+bye bye
