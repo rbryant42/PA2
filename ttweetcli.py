@@ -51,6 +51,7 @@ def main(args):
 		threading.Thread(target = clientListen, args = [clientSocket], daemon = True).start()
 	else:
 		print(USER_ALREADY_LOGGED_IN)
+		clientSocket.close()
 		sys.exit()
 
 def sendThread(clientSocket):

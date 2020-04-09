@@ -83,8 +83,6 @@ def command(cmd, data, connectionSocket, inputs):
 	if cmd == "USER":
 		usr = data[0]
 		if usr in users_and_tweets:
-			outputs.append(connectionSocket)
-			message_queues[connectionSocket].put("*USER*taken".encode())
 			if connectionSocket in outputs:
 				outputs.remove(connectionSocket)
 			inputs.remove(connectionSocket)
