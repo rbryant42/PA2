@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "ttweetser.py", line 270, in <module>
+    main(sys.argv)
+  File "ttweetser.py", line 38, in main
+    serverSocket.bind(('', serverPort))
+OSError: [Errno 98] Address already in use

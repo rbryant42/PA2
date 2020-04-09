@@ -26,13 +26,16 @@ def main(args):
 
 	# server port is the third argument
 	serverPort = int(args[2])
+	if serverPort not in range(1024, 65535+1):
+		print(INVALID_PORT)
+		sys.exit()
 
 	# username is fourth argument
 	username = args[3]
 
 	# checks that username only contains alphanumeric characters
 	# (3)
-	if re.search(r'[^a-zA-Z0-9]', username):
+	if len(username) == 0 or re.search(r'[^a-zA-Z0-9]', username):
 		print(INVALID_USERNAME)
 		sys.exit()
 
@@ -58,6 +61,54 @@ def main(args):
 		sys.exit()
 
 def sendThread(clientSocket):
+	def ttweet(data):
+		# sent cmd
+		# clientSocket.send(cmd.encode())
+		### Logic comment: Not sure if we should send the command
+		### before we check for input errors. Then, the server
+		### may be waiting to receive something that it won't
+		# handle message
+		tweet = data[1]
+		if tweet == None or len(tweet) == 0:
+			# (7)
+			print(EMPTY_MSG)
+			return
+		if len(tweet) > 150:
+			# (6)
+			print(MSG_TOO_LONG)
+			return
+		# put quotes back on tweet because its easier for displaying
+		# the tweets in the desired format later
+		tweet = prompt.split("tweet")[1].strip()
+		# handle hashtag
+		hashtag = data[2].strip()
+		split_hash = hashtag.split('#')
+		# gets rid of initial empty string for '#'
+		split_hash = split_hash[1:]
+		for s in split_hash:
+			if len(s) > 14 or s == 'ALL':
+				# (8)
+				print(ILLEGAL_HASHTAG)
+				return
+		if len(split_hash) > 5:
+			# (8)
+			print(ILLEGAL_HASHTAG)
+			return
+		elif '##' in hashtag:
+			# (8)
+			print(ILLEGAL_HASHTAG)
+			return
+		elif re.search(r'[^a-zA-Z0-9#]', hashtag):
+			# (8)
+			print(ILLEGAL_HASHTAG)
+			return
+		else:
+			# sent cmd
+			tweetbody = [tweet, split_hash]
+			tweetbody = json.dumps(tweetbody)
+			tweetbody = "*TWEET*" + tweetbody
+			clientSocket.send(tweetbody.encode())
+			return
 
 	while True:
 		# get user command
@@ -75,46 +126,7 @@ def sendThread(clientSocket):
 			data = prompt.split('"')
 			# check that we have 3 arguments
 			if len(data) == 3:
-				# sent cmd
-				# clientSocket.send(cmd.encode())
-				### Logic comment: Not sure if we should send the command
-				### before we check for input errors. Then, the server
-				### may be waiting to receive something that it won't
-				# handle message
-				tweet = data[1]
-				if tweet == None or len(tweet) == 0:
-					# (7)
-					print(EMPTY_MSG)
-				if len(tweet) > 150:
-					# (6)
-					print(MSG_TOO_LONG)
-				# put quotes back on tweet because its easier for displaying
-				# the tweets in the desired format later
-				tweet = prompt.split("tweet")[1].strip()
-				# handle hashtag
-				hashtag = data[2].strip()
-				split_hash = hashtag.split('#')
-				# gets rid of initial empty string for '#'
-				split_hash = split_hash[1:]
-				for s in split_hash:
-					if len(s) > 14 or s == 'ALL':
-						# (8)
-						print(ILLEGAL_HASHTAG)
-				if len(split_hash) > 5:
-					# (8)
-					print(ILLEGAL_HASHTAG)
-				elif '##' in hashtag:
-					# (8)
-					print(ILLEGAL_HASHTAG)
-				elif re.search(r'[^a-zA-Z0-9#]', hashtag):
-					# (8)
-					print(ILLEGAL_HASHTAG)
-				else:
-					# sent cmd
-					tweetbody = [tweet, split_hash]
-					tweetbody = json.dumps(tweetbody)
-					tweetbody = "*TWEET*" + tweetbody
-					clientSocket.send(tweetbody.encode())
+				ttweet(data)
 		elif cmd == 'subscribe':
 			if len(data) == 2:
 				hashtag = data[1].strip()
