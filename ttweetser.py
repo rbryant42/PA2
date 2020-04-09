@@ -58,7 +58,7 @@ def main(args):
 					msg = msg.split("*")
 					cmd = msg[1]
 					data = msg[2:]
-					command(cmd, data, s)
+					command(cmd, data, s, inputs)
 				#empty msg connection needs to be closed
 				else:
 					if s in outputs:
@@ -78,15 +78,17 @@ def main(args):
 
 # this parses all messages and adds appropriate responses
 # to message_queues[connectionSocket]
-def command(cmd, data, connectionSocket):
+def command(cmd, data, connectionSocket, inputs):
 	# connection is trying to connect as 'usr'
 	if cmd == "USER":
 		usr = data[0]
 		if usr in users_and_tweets:
 			outputs.append(connectionSocket)
 			message_queues[connectionSocket].put("*USER*taken".encode())
+			if connectionSocket in outputs:
+				outputs.remove(connectionSocket)
+			inputs.remove(connectionSocket)
 			connectionSocket.close()
-			#inputs.remove(connectionSocket)
 		elif usr not in users_and_tweets:
 			outputs.append(connectionSocket)
 			message_queues[connectionSocket].put("*USER*valid".encode())

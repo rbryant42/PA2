@@ -45,16 +45,13 @@ def main(args):
 	msg = "*USER*" + username
 	clientSocket.send(msg.encode())
 	val = clientSocket.recv(1024).decode()
-	if val == "taken":
-		# (4)
+	if val == "*USER*valid":
+		print(LOGIN_SUCCESS)
+		threading.Thread(target = sendThread, args = [clientSocket]).start()
+		threading.Thread(target = clientListen, args = [clientSocket], daemon = True).start()
+	else:
 		print(USER_ALREADY_LOGGED_IN)
 		sys.exit()
-	else:
-		# (1)
-		print(LOGIN_SUCCESS)
-
-	threading.Thread(target = sendThread, args = [clientSocket]).start()
-	threading.Thread(target = clientListen, args = [clientSocket], daemon = True).start()
 
 def sendThread(clientSocket):
 
