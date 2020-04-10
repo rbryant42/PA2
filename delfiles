@@ -1,0 +1,9 @@
+#! usr/bin/bash
+filenames=('cs32510.' 'cs32511.' 'cs32512.' 'cs32513.' 'cs32514.' 'cxworks.' 'network.' 'network0.' 'network1.' 'network2.' 'network3.' 'receiver.' 'sender.')
+
+for filename in ${filenames[@]}; do
+  echo "Removing ${filename}client.txt ..."
+  rm "${filename}client.txt"
+done
+
+echo "Files removed"
