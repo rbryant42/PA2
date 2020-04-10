@@ -213,8 +213,12 @@ def clientListen(clientSocket):
 
 			if cmd == "0":
 				tweet = msg[1:]
-				timeline.append(tweet)
 				print(tweet)
+				# kinda wonky fix tbh
+				tweetaslist = tweet.split(" ")
+				tweetaslist[0] += ':'
+				tweet = " ".join(tweetaslist)
+				timeline.append(tweet)
 
 			# server is sending sub or unsub status
 
