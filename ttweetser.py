@@ -10,7 +10,7 @@ import queue
 users_and_tweets = dict()
 
 # {hashtag: list of users subscribed to this hashtag}
-hashtags_and_users = dict()
+hashtags_and_users = { 'ALL': [] }
 
 # {hashtag: list of tweets with this hashtag}
 hashtags_and_tweets = dict()
@@ -71,6 +71,9 @@ def main(args):
 				if msg:
 					cmd = msg[0]
 					data = msg[1:]
+					## DELETE ##
+					print(msg)
+					## END DELETE ##
 					command(cmd, data, s, inputs)
 				#empty msg connection needs to be closed
 				else:
@@ -242,9 +245,11 @@ def command(cmd, data, connectionSocket, inputs):
 		# end connection
 		connectionSocket.close()
 
-	if cmd == "adminserverclose":
+	## DELETE ##
+	if cmd == "*":
 		print("Closing server...")
 		exit()
+	## END DELETE ##
 
 if __name__ == '__main__':
 	main(sys.argv)
