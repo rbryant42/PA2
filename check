@@ -1,0 +1,15 @@
+#! usr/bin/bash
+diff client.txt details/client.txt
+diff cs32510.client.txt details/cs32510.client.txt
+diff cs32511.client.txt details/cs32511.client.txt
+diff cs32512.client.txt details/cs32512.client.txt
+diff cs32513.client.txt details/cs32513.client.txt
+diff cs32514.client.txt details/cs32514.client.txt
+diff cxworks.client.txt details/cxworks.client.txt
+diff network.client.txt details/network.client.txt
+diff network0.client.txt details/network0.client.txt
+diff network1.client.txt details/network1.client.txt
+diff network2.client.txt details/network2.client.txt
+diff network3.client.txt details/network3.client.txt
+diff receiver.client.txt details/receiver.client.txt
+diff sender.client.txt details/sender.client.txt
