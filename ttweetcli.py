@@ -9,8 +9,6 @@ import time
 ###COMMANDS###
 # tweet is 0, subscribe is 1, unsubscribe is 2, getusers is 3, gettweets is 4, exit is 5
 
-socketLock = threading.Lock()
-socketAvailable = threading.Condition()
 timeline = []
 
 def main(args):
@@ -53,7 +51,12 @@ def main(args):
 	#check if username taken
 	msg = "6" + username
 	clientSocket.send(msg.encode())
-	val = clientSocket.recv(1024).decode()
+	## POTENTIALLY DELETE ##
+	try:
+		val = clientSocket.recv(1024).decode()
+	except Exception:
+		print("DISCONNECT ERROR")
+		sys.exit()
 	if val == "*USER*valid":
 		print(LOGIN_SUCCESS)
 		threading.Thread(target = sendThread, args = [clientSocket]).start()
@@ -230,6 +233,7 @@ def clientListen(clientSocket):
 			elif cmd == "7":
 				print(msg[1:])
 		except Exception as e:
+			print("Exception occurred: %s" %e)
 			pass
 
 def validIP(ipAddress):
