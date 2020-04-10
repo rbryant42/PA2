@@ -58,7 +58,16 @@ def main(args):
 				message_queues[connectionSocket] = queue.Queue()
 			#this case is an existing connection
 			else:
-				msg = s.recv(1024).decode()
+				try:
+					msg = s.recv(1024)
+				except Exception:
+					print("Client disconnected")
+					readable.remove(s)
+					inputs.remove(s)
+					continue
+				# TODO: Figure out exactly what's going on
+
+				msg = msg.decode()
 				#this is a nonempty msg
 				if msg:
 					msg = msg.split("*")
@@ -183,6 +192,10 @@ def command(cmd, data, connectionSocket, inputs):
 		users_and_hashtags.pop(usr)
 		print('removed: ', usr)
 		print("Diconnected from: ", addr[0])
+
+	if cmd == "adminserverclose":
+		print("Closing server...")
+		exit()
 
 	# elif cmd == "getusers":
 	# 	users = list(users_and_tweets.keys())

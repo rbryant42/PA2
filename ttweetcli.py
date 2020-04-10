@@ -183,6 +183,9 @@ def sendThread(clientSocket):
 			# (2)
 			print(EXIT_SUCCESS)
 			break
+		elif cmd == 'adminserverclose':
+			msg = "*adminserverclose*"
+			clientSocket.send(msg.encode())
 		else:
 			print('command invalid, try again.')
 
