@@ -233,7 +233,7 @@ def clientListen(clientSocket):
 			elif cmd == "7":
 				print(msg[1:])
 		except Exception as e:
-			print("Exception occurred: %s" %e)
+			print("SURPRISE EXCEPTION OCCURRRED: %s" % e)
 			pass
 
 def validIP(ipAddress):
