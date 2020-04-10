@@ -45,7 +45,7 @@ def main(args):
 
 	# attempts to connect to server, exits if not found
 	if clientSocket.connect_ex((serverName, serverPort)) != 0:
-		print(INVALID_PORT)
+		print(NO_SERVER)
 		sys.exit()
 
 	#check if username taken
@@ -121,6 +121,7 @@ def sendThread(clientSocket):
 		prompt = input()
 		# split prompt by quotes, gets each parameter
 		data = prompt.split()
+		#TODO: Exit somehow
 		# check that a prompt was entered
 		if data is None:
 			# (5)
@@ -184,11 +185,10 @@ def sendThread(clientSocket):
 				clientSocket.send(("4" + usr).encode())
 		elif cmd == 'exit':
 			clientSocket.send("5".encode())
-			clientSocket.close()
+			#Apparently clientSocket.close() should not happen here
 			# (2)
 			print(EXIT_SUCCESS)
 			sys.exit()
-			break
 		## DELETE ##
 		elif cmd == 'adminserverclose':
 			msg = "*adminserverclose*"

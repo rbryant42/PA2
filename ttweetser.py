@@ -15,7 +15,7 @@ hashtags_and_users = { 'ALL': [] }
 # {hashtag: list of tweets with this hashtag}
 hashtags_and_tweets = dict()
 
-# {connection: (username, subscribtion_count)}
+# {connection: (username, subscription_count)}
 connections_and_users = {}
 
 # {username: connection}
@@ -61,8 +61,12 @@ def main(args):
 					msg = s.recv(1024)
 				except Exception:
 					print("Client disconnected")
+					del message_queues[s]
+					del users_and_connections[connections_and_users[s][0]]
+					del connections_and_users[s]
 					readable.remove(s)
 					inputs.remove(s)
+					s.close()
 					continue
 				# TODO: Figure out exactly what's going on
 
@@ -100,12 +104,12 @@ def command(cmd, data, connectionSocket, inputs):
 
 	if cmd == "6":
 		usr = data
-		if usr in users_and_tweets:
+		if usr in users_and_connections:
 			if connectionSocket in outputs:
 				outputs.remove(connectionSocket)
 			inputs.remove(connectionSocket)
 			connectionSocket.close()
-		elif usr not in users_and_tweets:
+		else:
 			outputs.append(connectionSocket)
 			message_queues[connectionSocket].put("*USER*valid".encode())
 			connections_and_users[connectionSocket] = [usr, 0]
@@ -151,7 +155,7 @@ def command(cmd, data, connectionSocket, inputs):
 					subscribers.append(u)
 
 		for u in subscribers:
-			msg = "0" + usr + ": " + tweet
+			msg = "0" + usr + " " + tweet
 			outputs.append(users_and_connections[u])
 			message_queues[users_and_connections[u]].put(msg.encode())
 
@@ -228,6 +232,7 @@ def command(cmd, data, connectionSocket, inputs):
 	# connection wants to exit
 
 	elif cmd == "5":
+		print("BEGINNING CONNECTION CLOSURE")
 		# remove socket from all data structures
 		if connectionSocket in outputs:
 			outputs.remove(connectionSocket)
@@ -244,6 +249,7 @@ def command(cmd, data, connectionSocket, inputs):
 
 		# end connection
 		connectionSocket.close()
+		print("CONNECTION CLOSURE FOR %s COMPLETE"%usr)
 
 	## DELETE ##
 	if cmd == "*":
