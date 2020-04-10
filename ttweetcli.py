@@ -48,6 +48,8 @@ def main(args):
 		print(NO_SERVER)
 		sys.exit()
 
+	clientSocket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+
 	#check if username taken
 	msg = "6" + username
 	clientSocket.send(msg.encode())
@@ -68,6 +70,7 @@ def main(args):
 
 def sendThread(clientSocket):
 	def ttweet(data):
+		# TODO: Fix weird string error, probably happening in here??
 		# sent cmd
 		# clientSocket.send(cmd.encode())
 		### Logic comment: Not sure if we should send the command

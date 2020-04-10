@@ -35,6 +35,7 @@ def main(args):
 	# serverSocket.setblocking(False)
 	# bind socket to server port
 	serverSocket.bind(('', serverPort))
+	serverSocket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
 	# wait for client to connect
 	serverSocket.listen(5)
 
@@ -182,6 +183,7 @@ def command(cmd, data, connectionSocket, inputs):
 			outputs.append(connectionSocket)
 			message_queues[connectionSocket].put(("1" + SUB_OR_UNSUB_SUCCESS).encode())
 
+	# TODO: Fix unsubscribe functionality
 	# unsubscribe: connection is unsubscribing from a hashtag
 
 	elif cmd == "2":
