@@ -234,8 +234,10 @@ def command(cmd, data, connectionSocket, inputs):
 			for t in users_and_tweets[user]:
 				tweets.append((user + ": " + t))
 			tweets = json.dumps(tweets)
+			msg = ("4" + tweets).encode()
+			print("sizeof msg: ", sys.getsizeof(msg))
 			outputs.append(connectionSocket)
-			message_queues[connectionSocket].put(("4" + tweets).encode())
+			message_queues[connectionSocket].put(msg)
 
 
 

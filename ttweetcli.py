@@ -69,7 +69,7 @@ def main(args):
 		sys.exit()
 
 def sendThread(clientSocket):
-	def ttweet(prompt, data):
+	def ttweet(data):
 		# TODO: Fix weird string error, probably happening in here??
 		# sent cmd
 		# clientSocket.send(cmd.encode())
@@ -144,7 +144,7 @@ def sendThread(clientSocket):
 			#print(data)
 			# check that we have 3 arguments
 			if len(data) == 3:
-				ttweet(prompt, data)
+				ttweet(data)
 		elif cmd == 'subscribe':
 			if len(data) == 2:
 				hashtag = data[1].strip()
@@ -215,7 +215,7 @@ def clientListen(clientSocket):
 		try:
 			# 3 cases: sub success or error, tweet, or list of users
 
-			msg = clientSocket.recv(1024).decode()
+			msg = clientSocket.recv(4096).decode()
 			cmd = msg[0]
 
 			# server is sending tweet blast
@@ -245,11 +245,13 @@ def clientListen(clientSocket):
 			elif cmd == "4":
 				tweets = json.loads(msg[1:])
 				for t in tweets:
+					tweetaslist = t.split(" ")
+					t = " ".join(tweetaslist)
 					print(t)
 			elif cmd == "7":
 				print(msg[1:])
 		except Exception as e:
-			print("SURPRISE EXCEPTION OCCURRRED: %s" % e)
+			#print("SURPRISE EXCEPTION OCCURRRED: %s" % e)
 			pass
 
 def validIP(ipAddress):
