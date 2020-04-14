@@ -69,7 +69,7 @@ def main(args):
 		sys.exit()
 
 def sendThread(clientSocket):
-	def ttweet(data):
+	def ttweet(prompt, data):
 		# TODO: Fix weird string error, probably happening in here??
 		# sent cmd
 		# clientSocket.send(cmd.encode())
@@ -144,7 +144,7 @@ def sendThread(clientSocket):
 			#print(data)
 			# check that we have 3 arguments
 			if len(data) == 3:
-				ttweet(data)
+				ttweet(prompt, data)
 		elif cmd == 'subscribe':
 			if len(data) == 2:
 				hashtag = data[1].strip()
