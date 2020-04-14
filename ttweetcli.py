@@ -158,22 +158,23 @@ def sendThread(clientSocket):
 					clientSocket.send(msg.encode())
 		elif cmd == 'unsubscribe':
 			if len(data) == 2:
+				# Don't actually need to do much here
 				hashtag = data[1].strip()
-				split_hash = hashtag.split('#')
+				hashtag = hashtag.strip("#")
+				#split_hash = hashtag.split('#')
 				# handle hashtag errors in client input format
 				# server will handle if hashtag is already subscribed to
 				# or user at max subs
-				if len(hashtag) > 15:
-					print(ILLEGAL_HASHTAG)
-				elif len(split_hash) > 2:
-					print(ILLEGAL_HASHTAG)
+				#if len(hashtag) > 15:
+				#	print(ILLEGAL_HASHTAG)
+				#elif len(split_hash) > 2:
+				#	print(ILLEGAL_HASHTAG)
 				# re givin me problems for some reason
 				# elif re.search(r'[^a-zA-Z0-9#', hashtag):
 				# 	print("in3")
 				# 	print('hashtag illegal format, connection refused.')
-				else:
-					msg = "2" + hashtag[1:]
-					clientSocket.send(msg.encode())
+				msg = "2" + hashtag
+				clientSocket.send(msg.encode())
 		elif cmd == 'timeline':
 			if len(data) == 1:
 				for tweet in timeline:

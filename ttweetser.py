@@ -187,10 +187,11 @@ def command(cmd, data, connectionSocket, inputs):
 	# unsubscribe: connection is unsubscribing from a hashtag
 
 	elif cmd == "2":
-		unsub = data
+		hashUnsub = data
 		usr = connections_and_users[connectionSocket][0]
+		print("unsubscribing " + str(usr) + " from " + str(data))
 		# #ALL unsubs the user from #ALL and any other subscriptions
-		if unsub == "ALL":
+		if hashUnsub == "ALL":
 			print(hashtags_and_users)
 			for h in hashtags_and_users:
 				if usr in hashtags_and_users[h]:
@@ -199,8 +200,13 @@ def command(cmd, data, connectionSocket, inputs):
 			print(hashtags_and_users)
 		# only need to remove the user and decrement the subCount if they're
 		# actually subscribed to what they want to unsubscribe from
-		elif unsub in hashtags_and_users.keys() and usr in hashtags_and_users[unsub]:
-			hashtags_and_users[unsub].remove(usr)
+		elif hashUnsub in hashtags_and_users.keys() and usr in hashtags_and_users[hashUnsub]:
+			# we know control flow is reaching this point
+			print("Before:")
+			print(hashtags_and_users)
+			hashtags_and_users[hashUnsub].remove(usr)
+			print("After:")
+			print(hashtags_and_users)
 			connections_and_users[connectionSocket][1] -= 1
 		outputs.append(connectionSocket)
 		message_queues[connectionSocket].put(("2" + SUB_OR_UNSUB_SUCCESS).encode())
