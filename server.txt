@@ -92,6 +92,11 @@ The server is ready to connect...
 0["\"                                                                                                                                                      \" #echo", ["echo"]]
 ['"                                                                                                                                                      " #echo', ['echo']]
 2echo
+unsubscribing cxworks from echo
+Before:
+{'ALL': [], 'hash': [], 'echo': ['cxworks']}
+After:
+{'ALL': [], 'hash': [], 'echo': []}
 0["\" \" #echo", ["echo"]]
 ['" " #echo', ['echo']]
 0["\"cs3251\" #echo", ["echo"]]
@@ -312,10 +317,35 @@ CONNECTION CLOSURE FOR cxworks COMPLETE
 0["\"                                                                                                                                                      \" #echo", ["echo"]]
 ['"                                                                                                                                                      " #echo', ['echo']]
 2echo
+unsubscribing cs32510 from echo
+Before:
+{'ALL': [], 'hash': [], 'echo': ['cs32510', 'cs32511', 'cs32512', 'cs32513', 'cs32514']}
+After:
+{'ALL': [], 'hash': [], 'echo': ['cs32511', 'cs32512', 'cs32513', 'cs32514']}
 2echo
+unsubscribing cs32511 from echo
+Before:
+{'ALL': [], 'hash': [], 'echo': ['cs32511', 'cs32512', 'cs32513', 'cs32514']}
+After:
+{'ALL': [], 'hash': [], 'echo': ['cs32512', 'cs32513', 'cs32514']}
 2echo
+unsubscribing cs32512 from echo
+Before:
+{'ALL': [], 'hash': [], 'echo': ['cs32512', 'cs32513', 'cs32514']}
+After:
+{'ALL': [], 'hash': [], 'echo': ['cs32513', 'cs32514']}
 2echo
+unsubscribing cs32513 from echo
+Before:
+{'ALL': [], 'hash': [], 'echo': ['cs32513', 'cs32514']}
+After:
+{'ALL': [], 'hash': [], 'echo': ['cs32514']}
 2echo
+unsubscribing cs32514 from echo
+Before:
+{'ALL': [], 'hash': [], 'echo': ['cs32514']}
+After:
+{'ALL': [], 'hash': [], 'echo': []}
 0["\" \" #echo", ["echo"]]
 ['" " #echo', ['echo']]
 0["\" \" #echo", ["echo"]]
@@ -801,8 +831,9 @@ CONNECTION CLOSURE FOR cx COMPLETE
 0["\"                                                                                                                                                      \" #3#0", ["3", "0"]]
 ['"                                                                                                                                                      " #3#0', ['3', '0']]
 2ALL
-{'ALL': ['network', 'network0', 'network1', 'network2', 'network3'], 'hash': [], 'echo': [], '0': ['network0'], '1': ['network1'], '2': ['network2'], '3': ['network3']}
-{'ALL': ['network0', 'network1', 'network2', 'network3'], 'hash': [], 'echo': [], '0': ['network0'], '1': ['network1'], '2': ['network2'], '3': ['network3']}
+unsubscribing network from ALL
+{'ALL': ['network'], 'hash': [], 'echo': [], '0': ['network0'], '1': ['network1'], '2': ['network2'], '3': ['network3']}
+{'ALL': [], 'hash': [], 'echo': [], '0': ['network0'], '1': ['network1'], '2': ['network2'], '3': ['network3']}
 0["\" \" #0#1", ["0", "1"]]
 ['" " #0#1', ['0', '1']]
 0["\"cs3251\" #0#1", ["0", "1"]]

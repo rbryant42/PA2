@@ -130,7 +130,8 @@ def command(cmd, data, connectionSocket, inputs):
 		users_and_tweets[usr].append(tweet)
 
 		# everyone subscribed to #ALL will receive this tweet
-		subscribers = hashtags_and_users['ALL']
+		# [:] makes a copy
+		subscribers = hashtags_and_users['ALL'][:]
 
 		# add to subscribers everyone that's subscribed to a hashtag
 		# included in this tweet
