@@ -88,7 +88,11 @@ def sendThread(clientSocket):
 			return
 		# put quotes back on tweet because its easier for displaying
 		# the tweets in the desired format later
-		tweet = prompt.split("tweet")[1].strip()
+		
+		#tweet = prompt.split("tweet")[1].strip()
+		#tweet = '"' + tweet + '"'
+		tweet = prompt[5:].strip()
+
 		# handle hashtag
 		hashtag = data[2].strip()
 		split_hash = hashtag.split('#')
@@ -124,6 +128,8 @@ def sendThread(clientSocket):
 		prompt = input()
 		# split prompt by quotes, gets each parameter
 		data = prompt.split()
+		#print("Data:")
+		#print(data)
 		#TODO: Exit somehow
 		# check that a prompt was entered
 		if data is None:
@@ -134,6 +140,8 @@ def sendThread(clientSocket):
 		if cmd == 'tweet':
 			# split to get actual tweet
 			data = prompt.split('"')
+			#print("Split data:")
+			#print(data)
 			# check that we have 3 arguments
 			if len(data) == 3:
 				ttweet(data)

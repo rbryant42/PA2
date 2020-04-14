@@ -222,6 +222,7 @@ def command(cmd, data, connectionSocket, inputs):
 		message_queues[connectionSocket].put(msg)
 
 	# gettweets: connection wants all tweets from a user
+	# TODO: add hashtag to tweets
 
 	elif cmd == "4":
 		user = data
