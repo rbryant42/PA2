@@ -3,7 +3,7 @@ Overview:
 Team members:
 	Raymond Bryant- Set up initial client and server skeleton code. Coded handling of user input and basic multithreading to handle multiple clients. 
 	Ethan Sisk- Added onto user input handling and functionality, implemented select to ensure threads were nonblocking, implemented server side behavior for client input.
-	Tyler Brazelton- Finalized protocol messages to match outputs. Added additional input checks, refactored client and server code, wrote scripts and other code for debugging, and fixed a few major bugs. 
+	Tyler Brazelton- Finalized protocol messages to match outputs. Added additional input checks, refactored client and server code, wrote scripts and other code for debugging, and fixed a few major bugs.  
 How to use code:
 	Simply run ttweetcli.py and ttweetser.py as the project PDF dictates. Run ttweetser.py with: python ttweetser.py <port number>, where port number is a valid port number for the server. Run ttweetcli.py with: python ttweetcli.py <IP> <port number> <username>, where IP is the IP address of the client, port number is a valid port number, and username is a valid username. 
 Special Instructions:
