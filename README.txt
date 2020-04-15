@@ -7,4 +7,4 @@ Team members:
 How to use code:
 	Simply run ttweetcli.py and ttweetser.py as the project PDF dictates. Run ttweetser.py with: python ttweetser.py <port number>, where port number is a valid port number for the server. Run ttweetcli.py with: python ttweetcli.py <IP> <port number> <username>, where IP is the IP address of the client, port number is a valid port number, and username is a valid username. 
 Special Instructions:
-	None
+	Make sure that protocol.py is in the same directory as ttweetcli.py and ttweetser.py, as it contains macros used in those files.
